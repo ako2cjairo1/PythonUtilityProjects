@@ -11,6 +11,7 @@ import concurrent.futures as tasks
 
 FOLDER_NAME = "downloaded images"
 
+
 def create_file_dir(filename):
     # combine dir folder and filename
     file_dir = f"{FOLDER_NAME}/{filename}"
@@ -20,6 +21,7 @@ def create_file_dir(filename):
 
     # append "Copy of" if file already exist in download folder
     file_name = f"Copy of {filename}"
+
     # apply recursion until file directory name is unique
     return create_file_dir(file_name)
 
@@ -41,14 +43,12 @@ def remove_invalid_chars_from_filename(file_name):
 def parse_html(link, params=None):
     # get html of page with a search keyword of images to find
     response = rq.get(link) if params == None else rq.get(link, params=params)
-    # print(response.status_code)
-    # print(response.content)
+
     # using BeautifulSoup to parse the content from response
     return BeautifulSoup(response.text, "html.parser")
 
 
 def sort_list_of_tuple(tuple_list):
-
     def swap(idx1, idx2):
         tuple_list[idx1], tuple_list[idx2] = tuple_list[idx2], tuple_list[idx1]
 
@@ -61,6 +61,7 @@ def sort_list_of_tuple(tuple_list):
         while pos > 0 and tuple_list[pos-1][0].lower() > current[0].lower():
             swap(pos, pos-1)
             pos -= 1
+
         # swap the last smallest list
         tuple_list[pos] = current
 
@@ -72,36 +73,48 @@ def scrape_images(search_keyword):
 
     adobe_soup = parse_html(
         f"https://stock.adobe.com/ph/search/images?k={search_keyword}")
+
     # find all anchor tags that has a specific class attribute and filter only src that does not end with "gif"
     # from list of anchor tags find "src" value of images inside each anchor tag
-    adobe_site1 = [(anchor.img["alt"], anchor.img["src"]) for anchor in adobe_soup.find_all("a", attrs={
+    adobe_site1 = [(anchor.img["alt"], anchor.img["src"]) for anchor in adobe_soup.find_all("a", {
         "class": "js-search-result-thumbnail non-js-link"}) if anchor.img["src"].split(".")[-1] != "gif"]
     adobe_site2 = [(img["alt"], img["data-lazy"])
                    for img in adobe_soup.find_all("img") if img["src"].split(".")[-1] == "gif"]
+
     # # put the list to main list of images
     img_links.extend(adobe_site1)
     img_links.extend(adobe_site2)
 
     stocksnap_soup = parse_html(
         f"https://stocksnap.io/search/{search_keyword}")
+
     # select img tags that has src starts with "https://image.shutterstock.com/image-photo"
     # from img tags found, create a list of tuples with image name and image url
     stocksnap_site1 = [(img["src"].split("/")[-1].split(".")[-2], img["src"])
                        for img in stocksnap_soup.select('img[src^="https://image.shutterstock.com/image-photo"]')]
     stocksnap_site2 = [(img["alt"], img["src"]) for img in stocksnap_soup.find_all(
         'img') if "https://cdn.stocksnap.io/img-thumbs" in img["src"]]
+
     # put the list to main list of images
     img_links.extend(stocksnap_site1)
     img_links.extend(stocksnap_site2)
 
-    params = (("query", f"{search_keyword}^"),("xp", "^"),("per_page", "1000"))
+    params = (("query", f"{search_keyword}^"),
+              ("xp", "^"), ("per_page", "1000"))
+    # parse the response using BeautifulSoup
     unsplash_soup = parse_html("https://unsplash.com/napi/search", params)
+    # expected to load json type data instead of html tags
     data = json.loads(str(unsplash_soup))
+
     unsplash_site1 = []
     for item in data["photos"]["results"]:
         img_url = item["urls"]["full"]
-        extension_name = [ext_name for ext_name in img_url.split("&") if "fm=" in ext_name]
-        unsplash_site1.append((item["id"], img_url, extension_name[0].replace("amp;fm=",".")))
+        extension_name = [ext_name for ext_name in img_url.split(
+            "&") if "fm=" in ext_name]
+        # append tuple of (image name, image url, image extension name)
+        unsplash_site1.append(
+            (item["id"], img_url, extension_name[0].replace("amp;fm=", ".")))
+
     # put the list to main list of images
     img_links.extend(unsplash_site1)
 
@@ -110,7 +123,6 @@ def scrape_images(search_keyword):
 
 
 def download_images(image_link, counter):
-
     # remove invalid characters from filename
     name = remove_invalid_chars_from_filename(image_link[0])
 
@@ -127,16 +139,16 @@ def download_images(image_link, counter):
     file_dir, file_name = create_file_dir(file_name)
 
     # create images in binary mode
-    with open(file_dir, "wb+") as f:
+    with open(file_dir, "wb+") as fw:
         # create images using content from image link we extracted from site
         image = rq.get(image_link[1]).content
-        f.write(image)
+        fw.write(image)
         print(f"{file_name} was downloaded...")
 
 
 def process_image_list(image_links, search_keyword):
-
     image_count = len(image_links)
+
     # return to main() when no results found.
     if image_count <= 0:
         print(f"\nNo iamge(s) found for \"{search_keyword}\"")
@@ -164,11 +176,11 @@ def process_image_list(image_links, search_keyword):
     msg = "This may take a while. "
     print(f"\n{msg if image_count > 9 else ''}Downloading {image_count} images...\n")
 
-    counter = [x for x in range(1, image_count + 1)]
-    # slice item count to the specified image count to download
     with tasks.ThreadPoolExecutor() as executor:
+        img_indexer = [index for index in range(1, image_count + 1)]
         # map each image link item to be downloaded concurrently
-        executor.map(download_images, image_links[:image_count], counter)
+        # slice item count to the specified image_count to download
+        executor.map(download_images, image_links[:image_count], img_indexer)
 
     finish = time.perf_counter()
     print(f"\nFinished in {round(finish-start, 2)} seconds.")
