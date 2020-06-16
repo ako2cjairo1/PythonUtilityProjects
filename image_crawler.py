@@ -1,7 +1,7 @@
 # This is a sample implementation of BeautifulSoup python library
 # finds image urls on stock.adobe.com site and download them afterwards.
 
-from bs4 import *
+from bs4 import BeautifulSoup
 import requests as rq
 import os
 import json
@@ -42,7 +42,7 @@ def remove_invalid_chars_from_filename(file_name):
 
 def parse_html(link, params=None):
     # get html of page with a search keyword of images to find
-    response = rq.get(link) if params == None else rq.get(link, params=params)
+    response = rq.get(link) if params is None else rq.get(link, params=params)
 
     # using BeautifulSoup to parse the content from response
     return BeautifulSoup(response.text, "html.parser")
@@ -58,8 +58,8 @@ def sort_list_of_tuple(tuple_list):
         pos = i
 
         # continually swap until reaches the last smaller list
-        while pos > 0 and tuple_list[pos-1][0].lower() > current[0].lower():
-            swap(pos, pos-1)
+        while pos > 0 and tuple_list[pos - 1][0].lower() > current[0].lower():
+            swap(pos, pos - 1)
             pos -= 1
 
         # swap the last smallest list
