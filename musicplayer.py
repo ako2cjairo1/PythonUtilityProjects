@@ -3,13 +3,12 @@ import os
 import subprocess
 import time
 import keyboard
-import concurrent.futures as task
 from datetime import timedelta
 from random import sample, choice
 from pathlib import Path
 
 AUDIOFILE_EXT = ["wav", "mid","mp3", "aif"]
-TITLE_PADDING = 45
+TITLE_PADDING = 40
 ARTIST_NAME_PADDING = 20
 
 class Song:
@@ -40,6 +39,7 @@ class MusicPlayer:
         self.audio_file = ""
         self.player = None
         self.toggle_shuffle = False
+        self.all_music = False
         self.playlist = set()
 
     def get_duration(self, time_ticker=0):
@@ -62,27 +62,30 @@ class MusicPlayer:
     def load_media(self, is_playlist=True):
         playlist = []
 
-        print("\nChecking audio files...")
+        def _check_files(file_count=0):
+            os.system("cls")
+            print(f"\nChecking audio files..." + (f"{file_count} music files found so far." if self.all_music else ""))
+
         # checks for audio file extension names
         def _is_audiofile(filename):
             file_ext = filename.split(".")[-1]
             return file_ext.lower() in AUDIOFILE_EXT
 
-        def _get_metadata(filename):
+        def _get_metadata(filename, subdir):
             # check file if audio file
             if _is_audiofile(filename):
-                file_name = f"{self.folder_dir}/{filename}" if is_playlist else filename
-                # create a new instance of MediaPlayer using audio file
-                self.player = vlc.MediaPlayer(file_name)
+                file_name = f"{subdir}/{filename}" if is_playlist else filename
                 status = ""
                 duration = ""
 
                 try:
+                    # create a new instance of MediaPlayer using audio file
+                    self.player = vlc.MediaPlayer(file_name)
                     # "play the song" very fast for us to get the music length
                     self.player.play()
                     # # mute the sound so we don't hear anything while parsing the media data
                     self.player.audio_set_volume(0)
-                    time.sleep(0.3)
+                    time.sleep(0.1)
 
                     # get details of song
                     media = self.player.get_media()
@@ -99,27 +102,40 @@ class MusicPlayer:
                     
                     # song length in timedelta format (mm:ss.micro seconds)
                     duration = self.get_duration()
-                    self.player.stop()
                     
                 except Exception:
-                    self.player.stop()
                     status = "Can't read"
 
-                song = Song(filename, track_no, title, artist, duration, status, self.folder_dir)
-                # append the song details to playlist
-                playlist.append(song.serialize())
+                self.player.stop()
+                self.player = None
 
+                # ths handles "missing header" error during media parsing
+                if track_no != 0 and title and artist:
+                    song = Song(filename, track_no, title, artist, duration, status, subdir)
+                    # append the song details to playlist
+                    playlist.append(song.serialize())
+
+
+        _check_files()
+        time.sleep(1)
+        
+        if self.all_music:
+            file_counter = 1
+            # walk through all the files in the user directory folder
+            for subdir, _, music_files in os.walk(f"{Path.home()}\\Music"):
+                for audiofile in music_files:
+                    _get_metadata(audiofile, subdir)
+                    _check_files(file_counter)
+                    file_counter += 1
+                    
         # check if folder directory exist
-        if is_playlist and os.path.isdir(self.folder_dir):
+        elif is_playlist and os.path.isdir(self.folder_dir):
             # walk through all the files in the directory folder
             for audiofile in os.listdir(self.folder_dir):
-                _get_metadata(audiofile)
-
-            # with task.ThreadPoolExecutor() as exec:
-                # exec.map(_get_metadata, os.listdir(self.folder_dir))
+                _get_metadata(audiofile, self.folder_dir)
             
         elif os.path.isfile(self.audio_file):
-            _get_metadata(self.audio_file)
+            _get_metadata(self.audio_file, self.folder_dir)
 
         self.player = None
         return playlist
@@ -129,10 +145,12 @@ class MusicPlayer:
         for song in [song for song in self.playlist if song["name"] == song_name]:
             song.update((k, value) for k, v in song.items() if k == key)
 
-    def music_player(self, playlist_folder, play_shuffle=False):
+    def music_player(self, playlist_folder, play_shuffle=False, play_all_music=False):
         self.folder_dir = playlist_folder
         self.toggle_shuffle = play_shuffle
+        self.all_music = play_all_music
 
+        os.system("cls")
         if len(self.playlist) <= 0:
             # initialize player by parsing meta data of audio file(s)
             self.playlist = self.load_media()
@@ -173,22 +191,22 @@ class MusicPlayer:
                     return status     
 
                 # playlist header
-                print(f" #  {'Title'.ljust(TITLE_PADDING)}{'Artist'.ljust(ARTIST_NAME_PADDING)} Time      Status")
+                print(f" #    {'Title'.ljust(TITLE_PADDING)} {'Artist'.ljust(ARTIST_NAME_PADDING)} Time      Status")
                 print("=" * (TITLE_PADDING + ARTIST_NAME_PADDING + 25))
                 
+                total = len(self.playlist)
                 current_song_idx = self.playlist.index(([song for song in self.playlist if current_song in song["name"]][0]))
-                begin_idx = (0 if current_song_idx <= 25 else current_song_idx)
-                end_idx = (25 if current_song_idx <= 25 else (current_song_idx + 25))
 
-                alpha = begin_idx if ((len(self.playlist) - begin_idx) - end_idx) <= 25 else begin_idx - 12
-                omega = end_idx if end_idx < (len(self.playlist) - 1) else len(self.playlist)
+                song_idx = (0 if current_song_idx < 25 else current_song_idx)
+                alpha = (song_idx - 12) if (song_idx - 12) >= 0 else song_idx
+                omega = (alpha + 25) if (alpha + 25) <= total else total
 
-                if omega == (len(self.playlist) - 1) and len(self.playlist) > 25:
-                    alpha = omega - 25
+                if total >= 25 and (omega == total):
+                    alpha = (omega - 25)
 
                 # song names list, sliced to 25 songs
                 for song in self.playlist[alpha:omega]:
-                    track_no = song["track"].zfill(2)
+                    track_no = song["track"].zfill(2).ljust(4)
                     # determine the length of title, limit the size (to TITLE_PADDING value) if necessary
                     title = f"{song['title'] if len(song['title']) < TITLE_PADDING else song['title'][:(TITLE_PADDING - 4)].strip() + '...'}".ljust(TITLE_PADDING)
                     artist = f"{song['artist'] if len(song['artist']) < ARTIST_NAME_PADDING else song['artist'][:(ARTIST_NAME_PADDING - 3)].strip() + '...'}".ljust(ARTIST_NAME_PADDING)
@@ -196,25 +214,19 @@ class MusicPlayer:
                     # Now Playing, check if song's status is Playing or Paused
                     if song['name'] == current_song and (status.Playing or status.Paused):
                         duration = self.get_duration(time_ticker)
-                        print("-" * (TITLE_PADDING + ARTIST_NAME_PADDING + 25))
-                        print(f" {track_no} {title}{artist} {duration}  {_playing_status(status)}")
-                        print("-" * (TITLE_PADDING + ARTIST_NAME_PADDING + 25))
+                        print("-" * (TITLE_PADDING + ARTIST_NAME_PADDING + 28))
+                        print(f" {track_no} {title} {artist} {duration}  {_playing_status(status)}")
+                        print("-" * (TITLE_PADDING + ARTIST_NAME_PADDING + 28))
 
                         # update the "duration" meta data if it has no (--:--) duration value
                         if song['duration'] == "--:--":
-                            self.update_playlist(current_song, key="duration", value=duration)
-                    
-                    # status is Ended playing
-                    elif self.player.get_state == status.Ended:
-                        print(f" {track_no} {title}{artist} {song['duration']}     {song['status']}")
-                    
+                            self.update_playlist(current_song, key="duration", value=duration)    
                     else:
-                        print(f" {track_no} {title}{artist} {song['duration']}     {song['status']}")
+                        print(f" {track_no} {title} {artist} {song['duration']}     {song['status']}")
                 
                 # playlist footer
-                print("=" * (TITLE_PADDING + ARTIST_NAME_PADDING + 25))
-                print(f" [F5] {'Shuffle' if not self.toggle_shuffle else 'Unshuffle'} \t[F9] {'Pause' if self.player.is_playing() else 'Play'} \t[F10] Next \t[ESC] Stop (navigate to menu)")
-                # print("-" * (TITLE_PADDING + ARTIST_NAME_PADDING + 25))
+                print("=" * (TITLE_PADDING + ARTIST_NAME_PADDING + 28))
+                print(f" [F5] {'Shuffle' if not self.toggle_shuffle else 'Unshuffle'} \t[F9] {'Pause' if self.player.is_playing() else 'Play'} \t[F10] Next \t[F4] Stop (navigate to menu)")
 
             status = "Done"
             try:
@@ -243,7 +255,7 @@ class MusicPlayer:
                         status = "Shuffle"
                         break
                     # stop the song
-                    elif keyboard.is_pressed("esc"):
+                    elif keyboard.is_pressed("f4"):
                         status = "Stopped"
                         break
 
@@ -280,14 +292,15 @@ class MusicPlayer:
             self.playlist = sample(self.playlist, len(self.playlist))
             
             for _ in self.playlist:
-                unplayed_list = [song["name"] for song in self.playlist if song["status"] == ""]
+                unplayed_list = [song for song in self.playlist if song["status"] == ""]
 
                 if len(unplayed_list) > 0:
                     # get random name of song from playlist that haven't played yet.
                     song = choice(unplayed_list)
+                    self.folder_dir = song["song_dir"]
                     
                     # play the song
-                    (is_done_playing, song_status) = _play(song)
+                    (is_done_playing, song_status) = _play(song["name"])
                     
                     # stop playing the playlist and return to menu
                     if song_status == "Stopped":
@@ -303,7 +316,7 @@ class MusicPlayer:
                         status = "*Can't play"
 
                     # update status of the song in self.playlist (marked as "Done", "Skipped" or "Can't play")
-                    self.update_playlist(song, key="status", value=song_status)
+                    self.update_playlist(song["name"], key="status", value=song_status)
 
         # ordered playlist
         else:
@@ -312,6 +325,7 @@ class MusicPlayer:
             
             # get song from playlist that haven't played yet.
             for song in [song for song in self.playlist if song["status"] == ""]:
+                self.folder_dir = song["song_dir"]
                 # play the song
                 (is_done_playing, song_status) = _play(song["name"])
 
@@ -381,7 +395,7 @@ class MusicPlayer:
                 # song names list, sliced to 25 songs
                 for song in self.playlist:
                     if music_name and music_name == song["name"]:
-                        track_no = song["track"] + "."
+                        track_no = (song["track"] + ".").ljust(4)
                         # determine the length of title, limit the size (to TITLE_PADDING value) if necessary
                         title = f"{song['title'] if len(song['title']) < TITLE_PADDING else song['title'][:(TITLE_PADDING - 4)].strip() + '...'}".ljust(TITLE_PADDING)
                         artist = f"{song['artist'] if len(song['artist']) < ARTIST_NAME_PADDING else song['artist'][:(ARTIST_NAME_PADDING - 3)].strip() + '...'}".ljust(ARTIST_NAME_PADDING)
@@ -389,23 +403,18 @@ class MusicPlayer:
                         # Now Playing, check if song's status is Playing or Paused
                         if status.Playing or status.Paused:
                             duration = self.get_duration(time_ticker)
-                            track_details = f" {track_no} {title}{artist} {duration} {_playing_status(status)}   "
+                            track_details = f" {track_no} {title}  {artist}  {duration} {_playing_status(status)}    "
                             animate_track_details = track_details[int(scroll_ticker * 10):(len(track_details) - 1) + int(scroll_ticker * 10)] + track_details[0:int(scroll_ticker * 10)]
 
-                            print(" " + "-" * (TITLE_PADDING + ARTIST_NAME_PADDING + 28))
+                            print(" " + "-" * (TITLE_PADDING + ARTIST_NAME_PADDING + 33))
                             print(" " + animate_track_details)
-                            print(" " + "-" * (TITLE_PADDING + ARTIST_NAME_PADDING + 28))
+                            print(" " + "-" * (TITLE_PADDING + ARTIST_NAME_PADDING + 33))
 
                             # update the "duration" meta data if it has no (--:--) duration value
                             if song['duration'] == "--:--":
                                 self.update_playlist(current_song, key="duration", value=duration)
-                        
-                        # status is Ended playing
-                        elif self.player.get_state == status.Ended:
-                            print(f" {track_no} {title}{artist} {song['duration']}     {song['status']}")
-                        
                         else:
-                            print(f" {track_no} {title}{artist} {song['duration']}     {song['status']}")
+                            print(f" {track_no} {title} {artist} {song['duration']}     {song['status']}")
                         break
 
             status = "Done"
@@ -435,7 +444,7 @@ class MusicPlayer:
                         status = "Shuffle"
                         break
                     # stop the song
-                    elif keyboard.is_pressed("esc"):
+                    elif keyboard.is_pressed("f4"):
                         status = "Stopped"
                         break
 
@@ -446,7 +455,7 @@ class MusicPlayer:
 
                     # run ticker while song is playing
                     if self.player.is_playing():
-                        time_ticker += 0.15
+                        time_ticker += 0.17
                         scroll_ticker += 0.1
                         arrow_counter += 1
 
@@ -480,15 +489,16 @@ class MusicPlayer:
                 self.playlist = sample(self.playlist, len(self.playlist))
                 
                 for _ in self.playlist:
-                    unplayed_list = [song["name"] for song in self.playlist if song["status"] == ""]
+                    unplayed_list = [song for song in self.playlist if song["status"] == ""]
 
                     if len(unplayed_list) > 0:
                         # get random name of song from playlist that haven't played yet.
                         song_choice = choice(unplayed_list)
+                        self.folder_dir = song_choice["song_dir"]
 
-                        self.audio_file = f"{self.folder_dir}/{song_choice}"
+                        self.audio_file = f"{self.folder_dir}/{song_choice['name']}"
                         # play the song
-                        (is_done_playing, song_status) = _play(song_choice)
+                        (is_done_playing, song_status) = _play(song_choice["name"])
                         
                         # stop playing the playlist and return to menu
                         if song_status == "Stopped":
@@ -503,7 +513,7 @@ class MusicPlayer:
                             status = "*Can't play"
 
                         # update status of the song in self.playlist (marked as "Done", "Skipped" or "Can't play")
-                        self.update_playlist(song_choice, key="status", value=song_status)
+                        self.update_playlist(song_choice["name"], key="status", value=song_status)
             
             else:
                 # sort songs by track number (asc order)
@@ -511,6 +521,7 @@ class MusicPlayer:
 
                 # get song from playlist that haven't played yet.
                 for song in [song for song in self.playlist if song["status"] == ""]:
+                    self.folder_dir = song["song_dir"]
                     self.audio_file = f"{self.folder_dir}/{song['name']}"
                     
                     # play the song
@@ -570,6 +581,7 @@ if __name__ == "__main__":
         print("\t[2] Playlist")
         print("\t[3] Playlist (compact mode)")
         print("\t[4] Search computer for music files.")
+        print("\t[5] Play all music files from user directory.")
         print("\t[0] Exit")
         print("\n","=" * 40)
         option = input("\tYour input here: ").strip()
@@ -614,6 +626,10 @@ if __name__ == "__main__":
             
             print("Check the files we found in Windows Explorer folder..")
             time.sleep(10)
+        
+        elif option == "5":
+            mp = MusicPlayer()
+            mp.music_player(play_all_music=True, playlist_folder=f"{Path.home()}\\Music")
 
         elif option == "0":
             exit()
