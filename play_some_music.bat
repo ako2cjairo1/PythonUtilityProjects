@@ -1,8 +1,7 @@
 @ECHO OFF
 CD "C:\Users\Dave\DEVENV\Python\PythonUtilityProjects"
-CMDOW @ /ren \"Music Player\" /mov 601 -35 /siz 790 110
 @ECHO Music Player is initiating...
-python musicplayer.py random
+python musicplayer.py --option "random" --shuffle True --compactmode True
 @ECHO Music Player closing...
-TIMEOUT 2
+TIMEOUT 3
 EXIT

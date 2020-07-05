@@ -1,13 +1,43 @@
 [
     {
-        "name": "02. Heaven.mp3",
-        "track": "2",
-        "title": "Heaven",
-        "artist": "Avicii",
+        "name": "05 Something Just Like This.mp3",
+        "track": "5",
+        "title": "Something Just Like This",
+        "artist": "The Chainsmokers & Coldplay",
         "genre": "Dance",
-        "duration": "04:27",
+        "duration": "03:58",
         "status": "",
-        "song_dir": "C:\\Users\\Dave\\Music\\Avicii - TIM (2019)"
+        "song_dir": "C:\\Users\\Dave\\Documents\\Macbook Air BACKUP\\Downloads"
+    },
+    {
+        "name": "Benny Blanco Halsey & Khalid-Eastside.mp3",
+        "track": "4",
+        "title": "Eastside",
+        "artist": "Benny Blanco Halsey & Khalid",
+        "genre": "Pop",
+        "duration": "02:44",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Documents\\Macbook Air BACKUP\\Downloads"
+    },
+    {
+        "name": "DNCE - Cake By The Ocean.mp3",
+        "track": "1",
+        "title": "Cake By The Ocean",
+        "artist": "DNCE",
+        "genre": "Pop, Music, Pop/Rock, Rock",
+        "duration": "03:28",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Documents\\Macbook Air BACKUP\\Downloads"
+    },
+    {
+        "name": "Shawn Mendes-Treat You Better.mp3",
+        "track": "3",
+        "title": "Treat You Better",
+        "artist": "Shawn Mendes",
+        "genre": "Pop",
+        "duration": "02:58",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Documents\\Macbook Air BACKUP\\Downloads"
     },
     {
         "name": "01. Peace Of Mind (feat. Vargas & Lagola).mp3",
@@ -20,22 +50,12 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Avicii - TIM (2019)"
     },
     {
-        "name": "06. Ain't A Thing (feat. Bonn).mp3",
-        "track": "6",
-        "title": "Ain't A Thing (feat. Bonn)",
+        "name": "02. Heaven.mp3",
+        "track": "2",
+        "title": "Heaven",
         "artist": "Avicii",
         "genre": "Dance",
-        "duration": "02:54",
-        "status": "",
-        "song_dir": "C:\\Users\\Dave\\Music\\Avicii - TIM (2019)"
-    },
-    {
-        "name": "04. Tough Love (feat. Agnes & Vargas & Lagola).mp3",
-        "track": "4",
-        "title": "Tough Love (feat. Agnes & Vargas & Lagola)",
-        "artist": "Avicii",
-        "genre": "Dance",
-        "duration": "03:01",
+        "duration": "04:27",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\Avicii - TIM (2019)"
     },
@@ -50,12 +70,32 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Avicii - TIM (2019)"
     },
     {
+        "name": "04. Tough Love (feat. Agnes & Vargas & Lagola).mp3",
+        "track": "4",
+        "title": "Tough Love (feat. Agnes & Vargas & Lagola)",
+        "artist": "Avicii",
+        "genre": "Dance",
+        "duration": "03:01",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Avicii - TIM (2019)"
+    },
+    {
         "name": "05. Bad Reputation (feat. Joe Janiak).mp3",
         "track": "5",
         "title": "Bad Reputation (feat. Joe Janiak)",
         "artist": "Avicii",
         "genre": "Dance",
         "duration": "03:15",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Avicii - TIM (2019)"
+    },
+    {
+        "name": "06. Ain't A Thing (feat. Bonn).mp3",
+        "track": "6",
+        "title": "Ain't A Thing (feat. Bonn)",
+        "artist": "Avicii",
+        "genre": "Dance",
+        "duration": "02:54",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\Avicii - TIM (2019)"
     },
@@ -150,22 +190,22 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Bazzi - COSMIC (2018)"
     },
     {
-        "name": "04 Star.mp3",
-        "track": "4",
-        "title": "Star",
-        "artist": "Bazzi",
-        "genre": "Pop",
-        "duration": "02:40",
-        "status": "",
-        "song_dir": "C:\\Users\\Dave\\Music\\Bazzi - COSMIC (2018)"
-    },
-    {
         "name": "05 Why.mp3",
         "track": "5",
         "title": "Why",
         "artist": "Bazzi",
         "genre": "Pop",
         "duration": "02:18",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Bazzi - COSMIC (2018)"
+    },
+    {
+        "name": "04 Star.mp3",
+        "track": "4",
+        "title": "Star",
+        "artist": "Bazzi",
+        "genre": "Pop",
+        "duration": "02:40",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\Bazzi - COSMIC (2018)"
     },
@@ -290,22 +330,22 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Calvin Harris - Funk Wav Bounces Vol. 1 (2017) Mp3.320kbps [Hunter]"
     },
     {
-        "name": "10 Hard to Love (feat. Jessie Reyez).mp3",
-        "track": "10",
-        "title": "Hard to Love (feat. Jessie Reyez)",
-        "artist": "Calvin Harris",
-        "genre": "Electronic",
-        "duration": "03:41",
-        "status": "",
-        "song_dir": "C:\\Users\\Dave\\Music\\Calvin Harris - Funk Wav Bounces Vol. 1 (2017) Mp3.320kbps [Hunter]"
-    },
-    {
         "name": "2 Cash Out (feat. ScHoolboy Q, PARTYNEXTDOOR & D.R.A.M.).mp3",
         "track": "2",
         "title": "Cash Out (feat. ScHoolboy Q, PARTYNEXTDOOR & D.R.A.M.)",
         "artist": "Calvin Harris",
         "genre": "Electronic",
         "duration": "03:46",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Calvin Harris - Funk Wav Bounces Vol. 1 (2017) Mp3.320kbps [Hunter]"
+    },
+    {
+        "name": "10 Hard to Love (feat. Jessie Reyez).mp3",
+        "track": "10",
+        "title": "Hard to Love (feat. Jessie Reyez)",
+        "artist": "Calvin Harris",
+        "genre": "Electronic",
+        "duration": "03:41",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\Calvin Harris - Funk Wav Bounces Vol. 1 (2017) Mp3.320kbps [Hunter]"
     },
@@ -990,16 +1030,6 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Daniel Caesar - Freudian (2017)"
     },
     {
-        "name": "01 - Everlong.mp3",
-        "track": "1",
-        "title": "Everlong",
-        "artist": "Foo Fighters",
-        "genre": "Alternative",
-        "duration": "04:00",
-        "status": "",
-        "song_dir": "C:\\Users\\Dave\\Music\\Foo Fighters - Essentials (2020) Mp3 320kbps [PMEDIA] \u2b50\ufe0f"
-    },
-    {
         "name": "02 - The Sky Is A Neighborhood.mp3",
         "track": "2",
         "title": "The Sky Is A Neighborhood",
@@ -1016,6 +1046,16 @@
         "artist": "Foo Fighters",
         "genre": "Alternative",
         "duration": "04:05",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Foo Fighters - Essentials (2020) Mp3 320kbps [PMEDIA] \u2b50\ufe0f"
+    },
+    {
+        "name": "01 - Everlong.mp3",
+        "track": "1",
+        "title": "Everlong",
+        "artist": "Foo Fighters",
+        "genre": "Alternative",
+        "duration": "04:00",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\Foo Fighters - Essentials (2020) Mp3 320kbps [PMEDIA] \u2b50\ufe0f"
     },
@@ -1530,6 +1570,16 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Keane - The Best Of Keane [Deluxe Edition] [2013] [2CD] [Mp3-320]-V3nom [GLT]"
     },
     {
+        "name": "103-keane-bend_and_break.mp3",
+        "track": "3",
+        "title": "Bend and Break",
+        "artist": "Keane",
+        "genre": "Pop",
+        "duration": "03:28",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Keane - The Best Of Keane [Deluxe Edition] [2013] [2CD] [Mp3-320]-V3nom [GLT]"
+    },
+    {
         "name": "102-keane-somewhere_only_we_know.mp3",
         "track": "2",
         "title": "Somewhere Only We Know",
@@ -1546,16 +1596,6 @@
         "artist": "Keane",
         "genre": "Pop",
         "duration": "04:25",
-        "status": "",
-        "song_dir": "C:\\Users\\Dave\\Music\\Keane - The Best Of Keane [Deluxe Edition] [2013] [2CD] [Mp3-320]-V3nom [GLT]"
-    },
-    {
-        "name": "103-keane-bend_and_break.mp3",
-        "track": "3",
-        "title": "Bend and Break",
-        "artist": "Keane",
-        "genre": "Pop",
-        "duration": "03:28",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\Keane - The Best Of Keane [Deluxe Edition] [2013] [2CD] [Mp3-320]-V3nom [GLT]"
     },
@@ -1910,22 +1950,22 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Khalid - American Teen (2017)"
     },
     {
-        "name": "02. Young Dumb & Broke.mp3",
-        "track": "2",
-        "title": "Young Dumb & Broke",
-        "artist": "Khalid",
-        "genre": "R&B",
-        "duration": "03:14",
-        "status": "",
-        "song_dir": "C:\\Users\\Dave\\Music\\Khalid - American Teen (2017)"
-    },
-    {
         "name": "03. Location.mp3",
         "track": "3",
         "title": "Location",
         "artist": "Khalid",
         "genre": "R&B",
         "duration": "03:30",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Khalid - American Teen (2017)"
+    },
+    {
+        "name": "02. Young Dumb & Broke.mp3",
+        "track": "2",
+        "title": "Young Dumb & Broke",
+        "artist": "Khalid",
+        "genre": "R&B",
+        "duration": "03:14",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\Khalid - American Teen (2017)"
     },
@@ -2050,16 +2090,6 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Khalid - American Teen (2017)"
     },
     {
-        "name": "01. When I Fall In Love.mp3",
-        "track": "1",
-        "title": "When I Fall In Love",
-        "artist": "Michael Bubl\u00e9",
-        "genre": "Vocal Jazz, Pop",
-        "duration": "03:54",
-        "status": "",
-        "song_dir": "C:\\Users\\Dave\\Music\\Michael Bubl\u00e9 - love (Deluxe Edition) (2018) [320]"
-    },
-    {
         "name": "03. Love You Anymore.mp3",
         "track": "3",
         "title": "Love You Anymore",
@@ -2076,6 +2106,16 @@
         "artist": "Michael Bubl\u00e9",
         "genre": "Vocal Jazz, Pop",
         "duration": "03:13",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Michael Bubl\u00e9 - love (Deluxe Edition) (2018) [320]"
+    },
+    {
+        "name": "01. When I Fall In Love.mp3",
+        "track": "1",
+        "title": "When I Fall In Love",
+        "artist": "Michael Bubl\u00e9",
+        "genre": "Vocal Jazz, Pop",
+        "duration": "03:54",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\Michael Bubl\u00e9 - love (Deluxe Edition) (2018) [320]"
     },
@@ -3090,22 +3130,22 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Shawn Mendes - Shawn Mendes (2018)"
     },
     {
-        "name": "01 In My Blood.mp3",
-        "track": "1",
-        "title": "In My Blood",
-        "artist": "Shawn Mendes, Teddy Geiger, Geoff Warburton, Scott Harris",
-        "genre": "Pop",
-        "duration": "03:21",
-        "status": "",
-        "song_dir": "C:\\Users\\Dave\\Music\\Shawn Mendes - Shawn Mendes (2018)"
-    },
-    {
         "name": "02 Nervous.mp3",
         "track": "2",
         "title": "Nervous",
         "artist": "Shawn Mendes, Teddy Geiger, Nate Mercereau, Scott Harris",
         "genre": "Pop",
         "duration": "02:34",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Shawn Mendes - Shawn Mendes (2018)"
+    },
+    {
+        "name": "01 In My Blood.mp3",
+        "track": "1",
+        "title": "In My Blood",
+        "artist": "Shawn Mendes, Teddy Geiger, Geoff Warburton, Scott Harris",
+        "genre": "Pop",
+        "duration": "03:21",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\Shawn Mendes - Shawn Mendes (2018)"
     },
@@ -3270,22 +3310,22 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Snow Patrol \u2013 Greatest Hits [ChattChitto RG]\\Greatest Hits"
     },
     {
-        "name": "05 Snow Patrol - Called Out In The Dark.mp3",
-        "track": "5",
-        "title": "Called Out In The Dark",
-        "artist": "Snow Patrol",
-        "genre": "Rock",
-        "duration": "03:52",
-        "status": "",
-        "song_dir": "C:\\Users\\Dave\\Music\\Snow Patrol \u2013 Greatest Hits [ChattChitto RG]\\Greatest Hits"
-    },
-    {
         "name": "06 Snow Patrol - Chocolate.mp3",
         "track": "6",
         "title": "Chocolate",
         "artist": "Snow Patrol",
         "genre": "Rock",
         "duration": "02:51",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Snow Patrol \u2013 Greatest Hits [ChattChitto RG]\\Greatest Hits"
+    },
+    {
+        "name": "05 Snow Patrol - Called Out In The Dark.mp3",
+        "track": "5",
+        "title": "Called Out In The Dark",
+        "artist": "Snow Patrol",
+        "genre": "Rock",
+        "duration": "03:52",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\Snow Patrol \u2013 Greatest Hits [ChattChitto RG]\\Greatest Hits"
     },
@@ -3560,22 +3600,22 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Taylor Swift - Reputation (2017)"
     },
     {
-        "name": "10 King Of My Heart.mp3",
-        "track": "10",
-        "title": "King Of My Heart",
-        "artist": "Taylor Swift",
-        "genre": "Pop",
-        "duration": "03:24",
-        "status": "",
-        "song_dir": "C:\\Users\\Dave\\Music\\Taylor Swift - Reputation (2017)"
-    },
-    {
         "name": "11 Dancing With Our Hands Tied.mp3",
         "track": "11",
         "title": "Dancing With Our Hands Tied",
         "artist": "Taylor Swift",
         "genre": "Pop",
         "duration": "03:21",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Taylor Swift - Reputation (2017)"
+    },
+    {
+        "name": "10 King Of My Heart.mp3",
+        "track": "10",
+        "title": "King Of My Heart",
+        "artist": "Taylor Swift",
+        "genre": "Pop",
+        "duration": "03:24",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\Taylor Swift - Reputation (2017)"
     },
@@ -4868,46 +4908,6 @@
         "duration": "03:44",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\VA - Top 100 Running Songs (2019)"
-    },
-    {
-        "name": "05 Something Just Like This.mp3",
-        "track": "5",
-        "title": "Something Just Like This",
-        "artist": "The Chainsmokers & Coldplay",
-        "genre": "Dance",
-        "duration": "03:58",
-        "status": "",
-        "song_dir": "C:\\Users\\Dave\\Documents\\Macbook Air BACKUP\\Downloads"
-    },
-    {
-        "name": "Benny Blanco Halsey & Khalid-Eastside.mp3",
-        "track": "4",
-        "title": "Eastside",
-        "artist": "Benny Blanco Halsey & Khalid",
-        "genre": "Pop",
-        "duration": "02:44",
-        "status": "",
-        "song_dir": "C:\\Users\\Dave\\Documents\\Macbook Air BACKUP\\Downloads"
-    },
-    {
-        "name": "DNCE - Cake By The Ocean.mp3",
-        "track": "1",
-        "title": "Cake By The Ocean",
-        "artist": "DNCE",
-        "genre": "Pop, Music, Pop/Rock, Rock",
-        "duration": "03:28",
-        "status": "",
-        "song_dir": "C:\\Users\\Dave\\Documents\\Macbook Air BACKUP\\Downloads"
-    },
-    {
-        "name": "Shawn Mendes-Treat You Better.mp3",
-        "track": "3",
-        "title": "Treat You Better",
-        "artist": "Shawn Mendes",
-        "genre": "Pop",
-        "duration": "02:58",
-        "status": "",
-        "song_dir": "C:\\Users\\Dave\\Documents\\Macbook Air BACKUP\\Downloads"
     },
     {
         "name": "04. Tough Love (copy).mp3",

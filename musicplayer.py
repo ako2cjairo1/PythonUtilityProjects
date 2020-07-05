@@ -5,6 +5,7 @@ import subprocess
 import time
 import keyboard
 import json
+from argparse import ArgumentParser
 import concurrent.futures as task
 from datetime import timedelta
 from random import sample, choice
@@ -41,10 +42,10 @@ class Song:
 
 class MusicPlayer:
     def __init__(self):
-        # self.song = song
         self.folder_dir = ""
         self.audio_file = ""
         self.player = None
+        self.volume = 70
         self.toggle_shuffle = False
         self.all_music = False
         self.random_music = False
@@ -57,7 +58,6 @@ class MusicPlayer:
         result = "--:--"
 
         microsec = media.get_duration() if media else self.player.get_length()
-        
         get_length = (microsec / 1000)
         # get duration of song in seconds minus a buffer of 10 seconds
         seconds = int("{:.0f}".format(get_length - (10 if get_length > 0 else 0))) - ticker
@@ -70,22 +70,15 @@ class MusicPlayer:
             # extract seconds value from delta time
             seconds = detal_min_sec[3:5]
             result = ":".join([minutes, seconds])
-
         return result
+
 
     def load_media(self, is_playlist=True):
         playlist = []
-        self.music_counter = 0
 
         def _update_music_db():
             song_db = []
             isUpdate = False
-
-            def _isFound(name, song_dir):
-                for song in master_song_db:
-                    if name.strip().lower() == song["name"].strip().lower() and song_dir.strip().lower() == song["song_dir"].strip().lower():
-                        return True
-                return False
 
             if not os.path.isfile(MUSIC_DB_FILE):
                 for item in playlist:
@@ -98,7 +91,7 @@ class MusicPlayer:
                 master_song_db = _load_music_from_json()
 
                 for item in playlist:
-                    if not _isFound(item["name"], item["song_dir"]):
+                    if not self.isFound(playlist, item["name"], item["song_dir"]):
                         # parse the playlist and create a Song object
                         song = Song(item["name"], item["track"], item["title"], item["artist"], item["genre"], item["duration"], item["status"], item["song_dir"]).serialize()
                         # append the parsed song to song_db
@@ -116,7 +109,7 @@ class MusicPlayer:
 
             if len(song_db) > 0:
                 if isUpdate:
-                    print(f"Updating music database profile... {len(song_db)} new music added.")
+                    print(f"Updating music database profile... {len(new_song)} new music added.")
                 else:
                     print("Creating music database profile...")
                 time.sleep(1)
@@ -128,6 +121,38 @@ class MusicPlayer:
             time.sleep(1)
             # set the consolidated list 
             return
+
+        def _filter_by(title="", artist="", genre=""):
+            def _isFound(song):
+                title_filter = (title.strip().lower() in song["name"].strip().lower())
+                artist_filter = (artist.strip().lower() in song["artist"].strip().lower())
+                genre_filter = (genre.strip().lower() in song["genre"].strip().lower())
+
+                if title and artist and genre:
+                    return (title_filter and artist_filter and genre_filter)
+                elif title and artist:
+                    return (title_filter and artist_filter)
+                elif title and genre:
+                    return (title_filter and genre_filter)
+                elif artist and genre:
+                    return (artist_filter and genre_filter)
+                elif title:
+                    return title_filter
+                elif artist:
+                    return artist_filter
+                elif genre:
+                    return genre_filter
+
+            filtered_playlist = []
+            for song in playlist:
+                if _isFound(song):
+                    filtered_playlist.append(song)
+            
+            if len(filtered_playlist) > 0:
+                return filtered_playlist
+            else:
+                return playlist
+
 
         def _load_music_from_json():
             song_db = []
@@ -179,7 +204,6 @@ class MusicPlayer:
                     song = Song(filename, track_no, title, artist, genre, duration, status, subdir)
                     # append the song details to playlist
                     playlist.append(song.serialize())
-                    self.music_counter += 1
                     
         
         os.system("cls")
@@ -188,7 +212,7 @@ class MusicPlayer:
 
         # get music list from json database
         playlist = _load_music_from_json()
-
+        
         if len(playlist) > 0:
             # all music file loader
             if self.all_music:
@@ -197,25 +221,20 @@ class MusicPlayer:
             # random music loader
             elif self.random_music:
                 random_songs = []
+                music_counter = 0
 
-                def _isFound(name, song_dir):
-                    for song in random_songs:
-                        if name.strip().lower() == song["name"].strip().lower() and song_dir.strip().lower() == song["song_dir"].strip().lower():
-                            return True
-
-                    return False
-
-                for _ in playlist:
+                while True:
                     # pick a random song from the playlist
                     random_song = choice(playlist)
 
-                    # build list of names and corresponding dir
-                    if not _isFound(random_song["name"], random_song["song_dir"]) :
+                    # let's make sure we have unique song names
+                    if not self.isFound(random_songs, random_song["name"], random_song["song_dir"]):
+                        # build list of names and corresponding dir
                         random_songs.append(random_song)
-                        self.music_counter += 1
+                        music_counter += 1
                     
                     # we only need 12 random song
-                    if self.music_counter >= 12:
+                    if music_counter > 12:
                         break
 
                 # let's set the random songs we created in result playlist
@@ -225,9 +244,13 @@ class MusicPlayer:
             elif is_playlist and os.path.isdir(self.folder_dir):
                 playlist = [songs for songs in playlist if songs["song_dir"].strip().lower() == str(self.folder_dir).strip().lower()]
 
-            # 1 song loader, check if audio file exist   
+            # 1 song loader, check if audio file exist
             elif os.path.isfile(self.audio_file):
-                playlist = [song for song in playlist if song["name"].strip().lower() == self.audio_file and songs["song_dir"].strip().lower() == self.folder_dir.strip().lower()]
+                music_filename = self.audio_file.split("\\")
+                song_name = music_filename[-1]
+                song_dir = self.audio_file.replace("\\" + song_name,"")
+                
+                playlist = [song for song in playlist if song["name"].strip().lower() == song_name.strip().lower() and song["song_dir"].strip().lower() == song_dir.strip().lower()]
         
         # we didn't find the song/playlist in music database.
         # try to search the computer
@@ -235,6 +258,7 @@ class MusicPlayer:
             os.system("cls")
             print("\nThis may take a while. Please wait...")
             time.sleep(1)
+            
             # all music file loader
             if self.all_music:
                 # walk through all the files in the user directory folder
@@ -252,23 +276,24 @@ class MusicPlayer:
                     
                     with task.ThreadPoolExecutor() as exec:
                         exec.map(all_song.append, songs)
-
-                names = []
-                song_dirs = []
-                for _ in all_song:
+                
+                rand_music = []
+                music_counter = 0
+                while True:
                     # pick a random song from the playlist
                     random_song = choice(all_song)
-                    # build list of names and corresponding dir
-                    names.append(random_song["name"])
-                    song_dirs.append(random_song["song_dir"])
+                
+                    # let's make sure we have unique song names
+                    if not self.isFound(rand_music, random_song["name"], random_song["song_dir"]):
+                        # build list of names and corresponding dir
+                        rand_music.append(random_song)
+                        # get the meta data of this selected song
+                        _get_metadata(random_song["name"], random_song["song_dir"])
+                        music_counter += 1
                     
-                    self.music_counter += 1
                     # we only need 12 random song
-                    if self.music_counter >= 12:
+                    if music_counter > 12:
                         break
-
-                with task.ThreadPoolExecutor() as exec:
-                    exec.map(_get_metadata, names, song_dirs)
         
             # playlist loader check if folder directory exist
             elif is_playlist and os.path.isdir(self.folder_dir):
@@ -285,6 +310,7 @@ class MusicPlayer:
         # finally, update the music library, if there are new music to add
         _update_music_db()
 
+        playlist = _filter_by(self.title, self.artist, self.genre)
         self.player = None
         return playlist
 
@@ -293,7 +319,13 @@ class MusicPlayer:
         for song in [song for song in self.playlist if song["name"] == song_name]:
             song.update((k, value) for k, v in song.items() if k == key)
 
-    def music_player(self, playlist_folder, play_shuffle=False, play_all_music=False):
+    def isFound(self, ref_list, name, song_dir):
+        for song in ref_list:
+            if name.strip().lower() == song["name"].strip().lower() and song_dir.strip().lower() == song["song_dir"].strip().lower():
+                return True
+        return False
+
+    def music_player(self, playlist_folder="", play_shuffle=False, play_all_music=False):
         self.folder_dir = playlist_folder
         self.toggle_shuffle = play_shuffle
         self.all_music = play_all_music
@@ -377,17 +409,30 @@ class MusicPlayer:
                 # playlist footer
                 print(" " + "=" * (TITLE_PADDING + ARTIST_NAME_PADDING + 27))
                 print(f" [F5] {'Shuffle' if not self.toggle_shuffle else 'Unshuffle'} \t[F9] {'Pause' if self.player.is_playing() else 'Play'} \t[F10] Next \t[F4] Stop (navigate to menu)")
+                
+                if len(self.playlist) > 25:
+                    print(f" Showing {len(self.playlist[alpha:omega])} of {len(self.playlist)} songs on the playlist...")
+                else:
+                    print(f" {len(self.playlist)} songs on the playlist...")
 
             status = "Done"
             try:
                 self.player.play()
                 time.sleep(0.3)
-                self.player.audio_set_volume(100)
+                self.player.audio_set_volume(self.volume)
                 state = self.player.get_state()
 
                 while self.player.is_playing() or state.Paused:
                     status = "Done"
 
+                    # stop the song
+                    if keyboard.is_pressed("f4"):
+                        status = "Stopped"
+                        break
+                    # toggle shuffle playlist
+                    elif keyboard.is_pressed("f5"):
+                        status = "Shuffle"
+                        break
                     # play or pause the song
                     if keyboard.is_pressed("f9"):
                         if self.player.is_playing():
@@ -400,14 +445,14 @@ class MusicPlayer:
                         # to avoid skipping multiple times at once
                         time.sleep(1) 
                         break
-                    # toggle shuffle playlist
-                    elif keyboard.is_pressed("f5"):
-                        status = "Shuffle"
-                        break
-                    # stop the song
-                    elif keyboard.is_pressed("f4"):
-                        status = "Stopped"
-                        break
+                    # volume down
+                    elif keyboard.is_pressed("f12"):
+                        if 0 < self.volume < 100:
+                            self.volume -= 2
+                    # volume up
+                    elif keyboard.is_pressed("ins"):
+                        if 0 < self.volume < 100:
+                            self.volume += 2
 
                     # get song state every second
                     state = self.player.get_state()
@@ -499,9 +544,11 @@ class MusicPlayer:
         self.playlist = []  
         return
 
-    def compact_music_player(self, is_playlist, playlist_folder="", music_file="", play_shuffle=False):
+
+    def compact_music_player(self, is_playlist, playlist_folder="", music_file="", play_shuffle=False, play_all_music=False):
         self.folder_dir = playlist_folder
         self.toggle_shuffle = play_shuffle
+        self.all_music = play_all_music
 
         os.system("cls")
         if len(self.playlist) <= 0:
@@ -574,12 +621,20 @@ class MusicPlayer:
             try:
                 self.player.play()
                 time.sleep(1)
-                self.player.audio_set_volume(100)
+                self.player.audio_set_volume(self.volume)
                 state = self.player.get_state()
 
                 while self.player.is_playing() or state.Paused:
                     status = "Done"
-                    
+
+                    # stop the song
+                    if keyboard.is_pressed("f4"):
+                        status = "Stopped"
+                        break
+                    # toggle shuffle playlist
+                    elif keyboard.is_pressed("f5"):
+                        status = "Shuffle"
+                        break
                     # play or pause the song
                     if keyboard.is_pressed("f9"):
                         if self.player.is_playing():
@@ -592,15 +647,15 @@ class MusicPlayer:
                         # to avoid skipping multiple times at once
                         time.sleep(1) 
                         break
-                    # toggle shuffle playlist
-                    elif keyboard.is_pressed("f5"):
-                        status = "Shuffle"
-                        break
-                    # stop the song
-                    elif keyboard.is_pressed("f4"):
-                        status = "Stopped"
-                        break
-
+                    # volume down
+                    elif keyboard.is_pressed("f12"):
+                        if 0 < self.volume < 100:
+                            self.volume -= 2
+                    # volume up
+                    elif keyboard.is_pressed("ins"):
+                        if 0 < self.volume < 100:
+                            self.volume += 2
+    
                     # get song state every second
                     state = self.player.get_state()
                     # show playlist view
@@ -633,7 +688,7 @@ class MusicPlayer:
 
 
         # playlist music player
-        if (is_playlist and self.folder_dir) or self.random_music:
+        if is_playlist or self.random_music:
             os.system("cls")
             print(f"\n{'Shuffling' if self.toggle_shuffle else 'Loading'} playlist...")
             time.sleep(1)
@@ -723,14 +778,14 @@ class MusicPlayer:
         self.playlist = []
         return
 
-    def play_some_music(self):
-        # flag the load_media() funciton to initiate random song mode
-        self.random_music = True
 
-        # set the location of command prompt
-        os.system("CMDOW @ /ren \"Music Player\" /mov 601 -35 /siz 790 110")
-        self.compact_music_player(is_playlist=True, play_shuffle=True)
+    def play_some_music(self, is_playlist=True, playlist_folder="", music_file="", play_all_music=False, shuffle=False, compact_mode=True):
+        if compact_mode:
+            self.compact_music_player(is_playlist=is_playlist, playlist_folder=playlist_folder, music_file=music_file, play_shuffle=shuffle, play_all_music=play_all_music)
+        else:
+            self.music_player(play_shuffle=shuffle,playlist_folder=playlist_folder, play_all_music=play_all_music)
         return
+
 
     def menu(self):
         os.system("cls")
@@ -748,6 +803,7 @@ class MusicPlayer:
         print(" " + "-" * 40)
         return option
 
+
 def help():
     print("\nSyntax:")
     print(' \t musicplayer.py <\"your command\"> <\"parameter for command">\"\n')
@@ -761,49 +817,72 @@ def help():
     exit()
         
 if __name__ == "__main__":
-    param = sys.argv
+    param = None
+    parser = ArgumentParser(description="Give option to search and play music.")
+
+    # add option argument
+    parser.add_argument("--option", action="store",dest="option", required=True, help="Command option for music player.")
+    
+    # required parm for option "music file"
+    parser.add_argument("--filename", action="store", dest="filename", help="Filename of music to play.")
+    
+    # required parm for options: "normal playlist" and "compact playlist"
+    parser.add_argument("--playlist", action="store", dest="dir_folder", help="Folder location of playlist to play.")
+    
+    # shuffle option
+    parser.add_argument("--shuffle", action="store", dest="isShuffle", help="Shuffle the playlist.")
+
+    # view mode (compact or normal)
+    parser.add_argument("--compactmode", action="store", dest="isCompact", help="Determine the view of Music player (compact view or normal).")
+
+    # optional parm for option: "play by"
+    parser.add_argument("--title", action="store", dest="title", help="Title of music to search and play.")
+    parser.add_argument("--artist", action="store", dest="artist", help="Artist name of music to search and play.")
+    parser.add_argument("--genre", action="store", dest="genre", help="Genre of music to search and play.")
+    
+    
     # create an instanc of MusicPlayer 
     mp = MusicPlayer()
     option = ""
 
-    if len(param) > 1:
-        option = param[1].strip().lower()
+    param = parser.parse_args()
+    if param.option:
+        option = param.option.strip().lower()
     else:
         help()
 
+    isShuffle = True if param.isShuffle and param.isShuffle.strip().lower() == "true" else False
+    isCompact = True if param.isCompact and param.isCompact.strip().lower() == "true" else False
 
     if option == "music file":
-        audio_file = ""
-        if len(param) > 2:
-            audio_file = param[2]
-        else:
+        # required music filename argument
+        if not param.filename:
             help()
 
-        if os.path.isfile(audio_file):
+        if os.path.isfile(param.filename):
             # play sing song in compact mode
-            mp.compact_music_player(is_playlist=False, music_file=audio_file)
+            # mp.compact_music_player(is_playlist=False, music_file=param.filename)
+            mp.play_some_music(is_playlist=False, playlist_folder=param.dir_folder, music_file=param.filename, shuffle=isShuffle, compact_mode=isCompact)
 
     elif option == "normal playlist":
-        music_dir = ""
-        if len(param) > 2:
-            music_dir = param[2]
-        else:
+        # required music filename argument
+        if not param.dir_folder:
             help()
 
-        if os.path.isdir(music_dir):
-            # play the playlist of music
-            mp.music_player(playlist_folder=music_dir)
+        if os.path.isdir(param.dir_folder):
+        #     # play the playlist of music
+        #     mp.music_player(playlist_folder=param.dir_folder)
+            mp.play_some_music(playlist_folder=param.dir_folder, shuffle=isShuffle, compact_mode=False)
 
     elif option == "compact playlist":
-        music_dir = ""
-        if len(param) > 2:
-            music_dir = param[2]
-        else:
+        # required music filename argument
+        if not param.dir_folder:
             help()
 
-        if os.path.isdir(music_dir):
-            # play the playlist in compact mode
-            mp.compact_music_player(is_playlist=True, playlist_folder=music_dir)
+        if os.path.isdir(param.dir_folder):
+        #     # play the playlist in compact mode
+        #     mp.compact_music_player(is_playlist=True, playlist_folder=param.dir_folder)
+            mp.play_some_music(is_playlist=True, playlist_folder=param.dir_folder, compact_mode=True)
 
     elif option == "search":
         audio_filename = input("Put the song title or description here (i.e.: \"music\", \"music.mp3\" or \".mp3\" ): ").strip().lower()
@@ -820,23 +899,33 @@ if __name__ == "__main__":
     
     elif option == "play all":
         # play all music starting from User folder directory
-        mp.music_player(play_all_music=True, play_shuffle=True, playlist_folder=Path.home())
+        # mp.music_player(play_all_music=True, play_shuffle=True, playlist_folder=Path.home())
+        mp.play_some_music(play_all_music=True, playlist_folder=Path.home(), shuffle=isShuffle, compact_mode=isCompact)
     
     elif option == "random":
+        # flag the load_media() funciton to initiate random song mode
+        mp.random_music = True
         # paly random suggested music
-        mp.play_some_music()
+        mp.play_some_music(shuffle=isShuffle, compact_mode=isCompact)
 
     elif option == "play by":
-        title = ""
-        if len(param) > 2:
-            title = param[2]
-        else:
-            title = input("What's the title of the song?: ")
+    
+        if not param.title and not param.artist and not param.genre:
+            help()
         
-        # the title will be used for music search
-        mp.title = title
+        # music title will be used for music search
+        if param.title:
+            mp.title = param.title
+        # music artist will be used for music search
+        if param.artist:
+            mp.artist = param.artist
+        # music genre will be used for music search
+        if param.genre:
+            mp.genre = param.genre
+        
+        time.sleep(5)
         # paly random suggested music
-        mp.play_some_music()
+        mp.play_some_music(shuffle=isShuffle, compact_mode=isCompact)
 
     elif option == "0":
         pass

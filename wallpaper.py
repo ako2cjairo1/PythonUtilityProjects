@@ -3,6 +3,8 @@ import ctypes
 import random
 import time
 import ctypes
+import keyboard
+from shutil import move
 from typing import List
 from PIL import Image
 from win32.win32api import GetSystemMetrics
@@ -12,10 +14,12 @@ import win32gui
 from win32com.shell import shell, shellcon
 user32 = ctypes.windll.user32
 
-WALLPAPER_DIR = "C:\\Users\\Dave\\Pictures\\Downloaded Images\\"
-
 
 class Wallpaper:
+    def __init__(self):
+        self.DOWNLOADED_DIR = "C:\\Users\\Dave\\Pictures\\Downloaded Images\\"
+        self.WALLPAPER_DIR = "C:\\Users\\Dave\\Pictures\\HD Wallpapers\\"
+
     def set_wallpaper(self, image_path: str, use_activedesktop: bool = True):
         def force_refresh():
             user32.UpdatePerUserSystemParameters(1)
@@ -72,8 +76,8 @@ class Wallpaper:
         screen_width, screen_height = GetSystemMetrics(0), GetSystemMetrics(1)
 
         while not_found:
-            image_name = random.choice(os.listdir(WALLPAPER_DIR))
-            file_dir = f"{WALLPAPER_DIR}{image_name}"
+            image_name = random.choice(os.listdir(self.DOWNLOADED_DIR))
+            file_dir = f"{self.DOWNLOADED_DIR}{image_name}"
 
             if os.path.isfile(file_dir):
 
@@ -89,25 +93,51 @@ class Wallpaper:
         return image_name
 
     def dynamic_change_wallpaper(self, frequency=60, clrscr=False):
-        while True:
-            try:
-                if clrscr:
-                    os.system("cls")
-                    print("Changing the wallpaper...")
-                
-                # set a dynamic wallpaper
-                name = self.change_wallpaper()
+        ticker = frequency
 
-                if clrscr:
-                    os.system("cls")
-                
+        def _swap_dirs(dir1, dir2):
+            dir1, dir2 = dir2, dir1
+
+        while True:
+            if ticker >=  frequency:
+                try:
+                    if clrscr:
+                        os.system("cls")
+                        print("Changing the wallpaper...")
+                    
+                    # set a dynamic wallpaper
+                    name = self.change_wallpaper()
+
+                    if clrscr:
+                        os.system("cls")
+                    
+                    # show the filename of wallpaper used
+                    print(f"\nWallpaper:\n{name}")
+                    ticker = 0
+
+                except Exception as ex:
+                    print(str(ex))
+            
+            # on demand change wallpaper
+            if keyboard.is_pressed("f7"):
+                ticker = frequency
+
+            # switch source folder to WALLPAPER DIR
+            if keyboard.is_pressed("f3"):
+                _swap_dirs(self.DOWNLOADED_DIR, self.WALLPAPER_DIR)
+                ticker = frequency
+
+            # copy the current wallpaper to wallpaper collection
+            if keyboard.is_pressed("f6"):
+                move(f"{self.DOWNLOADED_DIR}{name}", f"{self.WALLPAPER_DIR}{name}")
+                print(f"{name}\nCopied...")
+                time.sleep(2)
+
                 # show the filename of wallpaper used
                 print(f"\nWallpaper:\n{name}")
 
-            except Exception as ex:
-                print(str(ex))
-
-            time.sleep(frequency)
+            ticker += 1
+            time.sleep(1)
 
 
 if __name__ == "__main__":
