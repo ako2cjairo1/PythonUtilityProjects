@@ -190,22 +190,22 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Bazzi - COSMIC (2018)"
     },
     {
-        "name": "05 Why.mp3",
-        "track": "5",
-        "title": "Why",
-        "artist": "Bazzi",
-        "genre": "Pop",
-        "duration": "02:18",
-        "status": "",
-        "song_dir": "C:\\Users\\Dave\\Music\\Bazzi - COSMIC (2018)"
-    },
-    {
         "name": "04 Star.mp3",
         "track": "4",
         "title": "Star",
         "artist": "Bazzi",
         "genre": "Pop",
         "duration": "02:40",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Bazzi - COSMIC (2018)"
+    },
+    {
+        "name": "05 Why.mp3",
+        "track": "5",
+        "title": "Why",
+        "artist": "Bazzi",
+        "genre": "Pop",
+        "duration": "02:18",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\Bazzi - COSMIC (2018)"
     },
@@ -330,22 +330,22 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Calvin Harris - Funk Wav Bounces Vol. 1 (2017) Mp3.320kbps [Hunter]"
     },
     {
-        "name": "2 Cash Out (feat. ScHoolboy Q, PARTYNEXTDOOR & D.R.A.M.).mp3",
-        "track": "2",
-        "title": "Cash Out (feat. ScHoolboy Q, PARTYNEXTDOOR & D.R.A.M.)",
-        "artist": "Calvin Harris",
-        "genre": "Electronic",
-        "duration": "03:46",
-        "status": "",
-        "song_dir": "C:\\Users\\Dave\\Music\\Calvin Harris - Funk Wav Bounces Vol. 1 (2017) Mp3.320kbps [Hunter]"
-    },
-    {
         "name": "10 Hard to Love (feat. Jessie Reyez).mp3",
         "track": "10",
         "title": "Hard to Love (feat. Jessie Reyez)",
         "artist": "Calvin Harris",
         "genre": "Electronic",
         "duration": "03:41",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Calvin Harris - Funk Wav Bounces Vol. 1 (2017) Mp3.320kbps [Hunter]"
+    },
+    {
+        "name": "2 Cash Out (feat. ScHoolboy Q, PARTYNEXTDOOR & D.R.A.M.).mp3",
+        "track": "2",
+        "title": "Cash Out (feat. ScHoolboy Q, PARTYNEXTDOOR & D.R.A.M.)",
+        "artist": "Calvin Harris",
+        "genre": "Electronic",
+        "duration": "03:46",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\Calvin Harris - Funk Wav Bounces Vol. 1 (2017) Mp3.320kbps [Hunter]"
     },
@@ -1030,6 +1030,16 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Daniel Caesar - Freudian (2017)"
     },
     {
+        "name": "01 - Everlong.mp3",
+        "track": "1",
+        "title": "Everlong",
+        "artist": "Foo Fighters",
+        "genre": "Alternative",
+        "duration": "04:00",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Foo Fighters - Essentials (2020) Mp3 320kbps [PMEDIA] \u2b50\ufe0f"
+    },
+    {
         "name": "02 - The Sky Is A Neighborhood.mp3",
         "track": "2",
         "title": "The Sky Is A Neighborhood",
@@ -1046,16 +1056,6 @@
         "artist": "Foo Fighters",
         "genre": "Alternative",
         "duration": "04:05",
-        "status": "",
-        "song_dir": "C:\\Users\\Dave\\Music\\Foo Fighters - Essentials (2020) Mp3 320kbps [PMEDIA] \u2b50\ufe0f"
-    },
-    {
-        "name": "01 - Everlong.mp3",
-        "track": "1",
-        "title": "Everlong",
-        "artist": "Foo Fighters",
-        "genre": "Alternative",
-        "duration": "04:00",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\Foo Fighters - Essentials (2020) Mp3 320kbps [PMEDIA] \u2b50\ufe0f"
     },
@@ -1130,6 +1130,16 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Foo Fighters - Essentials (2020) Mp3 320kbps [PMEDIA] \u2b50\ufe0f"
     },
     {
+        "name": "11 - All My Life.mp3",
+        "track": "11",
+        "title": "All My Life",
+        "artist": "Foo Fighters",
+        "genre": "",
+        "duration": "04:14",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Foo Fighters - Essentials (2020) Mp3 320kbps [PMEDIA] \u2b50\ufe0f"
+    },
+    {
         "name": "12 - Big Me.mp3",
         "track": "12",
         "title": "Big Me",
@@ -1156,6 +1166,16 @@
         "artist": "Foo Fighters",
         "genre": "Pop",
         "duration": "04:02",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Foo Fighters - Essentials (2020) Mp3 320kbps [PMEDIA] \u2b50\ufe0f"
+    },
+    {
+        "name": "15 - Rope.mp3",
+        "track": "15",
+        "title": "Rope",
+        "artist": "Foo Fighters",
+        "genre": "",
+        "duration": "04:09",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\Foo Fighters - Essentials (2020) Mp3 320kbps [PMEDIA] \u2b50\ufe0f"
     },
@@ -1570,22 +1590,22 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Keane - The Best Of Keane [Deluxe Edition] [2013] [2CD] [Mp3-320]-V3nom [GLT]"
     },
     {
-        "name": "103-keane-bend_and_break.mp3",
-        "track": "3",
-        "title": "Bend and Break",
-        "artist": "Keane",
-        "genre": "Pop",
-        "duration": "03:28",
-        "status": "",
-        "song_dir": "C:\\Users\\Dave\\Music\\Keane - The Best Of Keane [Deluxe Edition] [2013] [2CD] [Mp3-320]-V3nom [GLT]"
-    },
-    {
         "name": "102-keane-somewhere_only_we_know.mp3",
         "track": "2",
         "title": "Somewhere Only We Know",
         "artist": "Keane",
         "genre": "Pop",
         "duration": "03:46",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Keane - The Best Of Keane [Deluxe Edition] [2013] [2CD] [Mp3-320]-V3nom [GLT]"
+    },
+    {
+        "name": "103-keane-bend_and_break.mp3",
+        "track": "3",
+        "title": "Bend and Break",
+        "artist": "Keane",
+        "genre": "Pop",
+        "duration": "03:28",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\Keane - The Best Of Keane [Deluxe Edition] [2013] [2CD] [Mp3-320]-V3nom [GLT]"
     },
@@ -1950,22 +1970,22 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Khalid - American Teen (2017)"
     },
     {
-        "name": "03. Location.mp3",
-        "track": "3",
-        "title": "Location",
-        "artist": "Khalid",
-        "genre": "R&B",
-        "duration": "03:30",
-        "status": "",
-        "song_dir": "C:\\Users\\Dave\\Music\\Khalid - American Teen (2017)"
-    },
-    {
         "name": "02. Young Dumb & Broke.mp3",
         "track": "2",
         "title": "Young Dumb & Broke",
         "artist": "Khalid",
         "genre": "R&B",
         "duration": "03:14",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Khalid - American Teen (2017)"
+    },
+    {
+        "name": "03. Location.mp3",
+        "track": "3",
+        "title": "Location",
+        "artist": "Khalid",
+        "genre": "R&B",
+        "duration": "03:30",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\Khalid - American Teen (2017)"
     },
@@ -2090,12 +2110,12 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Khalid - American Teen (2017)"
     },
     {
-        "name": "03. Love You Anymore.mp3",
-        "track": "3",
-        "title": "Love You Anymore",
+        "name": "01. When I Fall In Love.mp3",
+        "track": "1",
+        "title": "When I Fall In Love",
         "artist": "Michael Bubl\u00e9",
         "genre": "Vocal Jazz, Pop",
-        "duration": "02:53",
+        "duration": "03:54",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\Michael Bubl\u00e9 - love (Deluxe Edition) (2018) [320]"
     },
@@ -2110,12 +2130,12 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Michael Bubl\u00e9 - love (Deluxe Edition) (2018) [320]"
     },
     {
-        "name": "01. When I Fall In Love.mp3",
-        "track": "1",
-        "title": "When I Fall In Love",
+        "name": "03. Love You Anymore.mp3",
+        "track": "3",
+        "title": "Love You Anymore",
         "artist": "Michael Bubl\u00e9",
         "genre": "Vocal Jazz, Pop",
-        "duration": "03:54",
+        "duration": "02:53",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\Michael Bubl\u00e9 - love (Deluxe Edition) (2018) [320]"
     },
@@ -3130,22 +3150,22 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Shawn Mendes - Shawn Mendes (2018)"
     },
     {
-        "name": "02 Nervous.mp3",
-        "track": "2",
-        "title": "Nervous",
-        "artist": "Shawn Mendes, Teddy Geiger, Nate Mercereau, Scott Harris",
-        "genre": "Pop",
-        "duration": "02:34",
-        "status": "",
-        "song_dir": "C:\\Users\\Dave\\Music\\Shawn Mendes - Shawn Mendes (2018)"
-    },
-    {
         "name": "01 In My Blood.mp3",
         "track": "1",
         "title": "In My Blood",
         "artist": "Shawn Mendes, Teddy Geiger, Geoff Warburton, Scott Harris",
         "genre": "Pop",
         "duration": "03:21",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Shawn Mendes - Shawn Mendes (2018)"
+    },
+    {
+        "name": "02 Nervous.mp3",
+        "track": "2",
+        "title": "Nervous",
+        "artist": "Shawn Mendes, Teddy Geiger, Nate Mercereau, Scott Harris",
+        "genre": "Pop",
+        "duration": "02:34",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\Shawn Mendes - Shawn Mendes (2018)"
     },
@@ -3270,6 +3290,216 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Shawn Mendes - Shawn Mendes (2018)"
     },
     {
+        "name": "Sia - Alive .mp3",
+        "track": "1",
+        "title": "Alive",
+        "artist": "Sia",
+        "genre": "",
+        "duration": "04:14",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Sia - The Best Songs"
+    },
+    {
+        "name": "Sia - Big Girls Cry .mp3",
+        "track": "2",
+        "title": "Big Girls Cry",
+        "artist": "Sia",
+        "genre": "",
+        "duration": "03:21",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Sia - The Best Songs"
+    },
+    {
+        "name": "Sia - Bird Set Free .mp3",
+        "track": "1",
+        "title": "Bird Set Free",
+        "artist": "Sia",
+        "genre": "",
+        "duration": "04:03",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Sia - The Best Songs"
+    },
+    {
+        "name": "Sia - Breathe Me .mp3",
+        "track": "3",
+        "title": "Breathe Me",
+        "artist": "Sia",
+        "genre": "",
+        "duration": "04:23",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Sia - The Best Songs"
+    },
+    {
+        "name": "Sia - Broken Glass .mp3",
+        "track": "11",
+        "title": "Broken Glass",
+        "artist": "Sia",
+        "genre": "",
+        "duration": "04:15",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Sia - The Best Songs"
+    },
+    {
+        "name": "Sia - California Dreamin' .mp3",
+        "track": "24",
+        "title": "California Dreamin'",
+        "artist": "Sia",
+        "genre": "",
+        "duration": "03:26",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Sia - The Best Songs"
+    },
+    {
+        "name": "Sia - Chandelier (Piano Version) .mp3",
+        "track": "13",
+        "title": "Chandelier (Piano Version)",
+        "artist": "Sia",
+        "genre": "",
+        "duration": "03:50",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Sia - The Best Songs"
+    },
+    {
+        "name": "Sia - Chandelier .mp3",
+        "track": "1",
+        "title": "Chandelier",
+        "artist": "Sia",
+        "genre": "",
+        "duration": "03:26",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Sia - The Best Songs"
+    },
+    {
+        "name": "Sia - Cheap Thrills .mp3",
+        "track": "1",
+        "title": "Cheap Thrills",
+        "artist": "Sia",
+        "genre": "",
+        "duration": "03:21",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Sia - The Best Songs"
+    },
+    {
+        "name": "Sia - Clap Your Hands .mp3",
+        "track": "1",
+        "title": "Clap Your Hands",
+        "artist": "Sia",
+        "genre": "",
+        "duration": "03:49",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Sia - The Best Songs"
+    },
+    {
+        "name": "Sia - Elastic Heart (Piano Version) .mp3",
+        "track": "14",
+        "title": "Elastic Heart (Piano Version)",
+        "artist": "Sia",
+        "genre": "",
+        "duration": "04:00",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Sia - The Best Songs"
+    },
+    {
+        "name": "Sia - Elastic Heart .mp3",
+        "track": "8",
+        "title": "Elastic Heart",
+        "artist": "Sia",
+        "genre": "",
+        "duration": "04:07",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Sia - The Best Songs"
+    },
+    {
+        "name": "Sia - Fire Meet Gasoline .mp3",
+        "track": "10",
+        "title": "Fire Meet Gasoline",
+        "artist": "Sia",
+        "genre": "",
+        "duration": "03:52",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Sia - The Best Songs"
+    },
+    {
+        "name": "Sia - Footprints .mp3",
+        "track": "9",
+        "title": "Footprints",
+        "artist": "Sia Erick Serna dlsdl sd",
+        "genre": "",
+        "duration": "03:03",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Sia - The Best Songs"
+    },
+    {
+        "name": "Sia - I Go To Sleep .mp3",
+        "track": "7",
+        "title": "I Go To Sleep",
+        "artist": "Sia",
+        "genre": "",
+        "duration": "03:36",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Sia - The Best Songs"
+    },
+    {
+        "name": "Sia - Move Your Body .mp3",
+        "track": "4",
+        "title": "Move Your Body",
+        "artist": "Sia",
+        "genre": "",
+        "duration": "03:57",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Sia - The Best Songs"
+    },
+    {
+        "name": "Sia - One Million Bullets .mp3",
+        "track": "1",
+        "title": "One Million Bullets",
+        "artist": "Sia",
+        "genre": "",
+        "duration": "04:01",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Sia - The Best Songs"
+    },
+    {
+        "name": "Sia - Reaper .mp3",
+        "track": "1",
+        "title": "Reaper",
+        "artist": "Sia",
+        "genre": "",
+        "duration": "03:29",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Sia - The Best Songs"
+    },
+    {
+        "name": "Sia - Salted Wound (From The Fifty Shades Of Grey Soundtrack) .mp3",
+        "track": "1",
+        "title": "Salted Wound (From The \"Fifty Shades Of Grey\" Soundtrack)",
+        "artist": "Sia",
+        "genre": "",
+        "duration": "04:21",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Sia - The Best Songs"
+    },
+    {
+        "name": "Sia - Sweet Design .mp3",
+        "track": "10",
+        "title": "Sweet Design",
+        "artist": "Sia",
+        "genre": "",
+        "duration": "02:16",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Sia - The Best Songs"
+    },
+    {
+        "name": "Sia - Unstoppable .mp3",
+        "track": "5",
+        "title": "Unstoppable",
+        "artist": "Sia",
+        "genre": "",
+        "duration": "03:28",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Sia - The Best Songs"
+    },
+    {
         "name": "01 Snow Patrol - The Lightning Strike (What If This Storm Ends\u00bf).mp3",
         "track": "1",
         "title": "The Lightning Strike (What If This Storm Ends?)",
@@ -3310,22 +3540,22 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Snow Patrol \u2013 Greatest Hits [ChattChitto RG]\\Greatest Hits"
     },
     {
-        "name": "06 Snow Patrol - Chocolate.mp3",
-        "track": "6",
-        "title": "Chocolate",
-        "artist": "Snow Patrol",
-        "genre": "Rock",
-        "duration": "02:51",
-        "status": "",
-        "song_dir": "C:\\Users\\Dave\\Music\\Snow Patrol \u2013 Greatest Hits [ChattChitto RG]\\Greatest Hits"
-    },
-    {
         "name": "05 Snow Patrol - Called Out In The Dark.mp3",
         "track": "5",
         "title": "Called Out In The Dark",
         "artist": "Snow Patrol",
         "genre": "Rock",
         "duration": "03:52",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Snow Patrol \u2013 Greatest Hits [ChattChitto RG]\\Greatest Hits"
+    },
+    {
+        "name": "06 Snow Patrol - Chocolate.mp3",
+        "track": "6",
+        "title": "Chocolate",
+        "artist": "Snow Patrol",
+        "genre": "Rock",
+        "duration": "02:51",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\Snow Patrol \u2013 Greatest Hits [ChattChitto RG]\\Greatest Hits"
     },
@@ -3600,22 +3830,22 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Taylor Swift - Reputation (2017)"
     },
     {
-        "name": "11 Dancing With Our Hands Tied.mp3",
-        "track": "11",
-        "title": "Dancing With Our Hands Tied",
-        "artist": "Taylor Swift",
-        "genre": "Pop",
-        "duration": "03:21",
-        "status": "",
-        "song_dir": "C:\\Users\\Dave\\Music\\Taylor Swift - Reputation (2017)"
-    },
-    {
         "name": "10 King Of My Heart.mp3",
         "track": "10",
         "title": "King Of My Heart",
         "artist": "Taylor Swift",
         "genre": "Pop",
         "duration": "03:24",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Taylor Swift - Reputation (2017)"
+    },
+    {
+        "name": "11 Dancing With Our Hands Tied.mp3",
+        "track": "11",
+        "title": "Dancing With Our Hands Tied",
+        "artist": "Taylor Swift",
+        "genre": "Pop",
+        "duration": "03:21",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\Taylor Swift - Reputation (2017)"
     },
@@ -4908,15 +5138,5 @@
         "duration": "03:44",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\VA - Top 100 Running Songs (2019)"
-    },
-    {
-        "name": "04. Tough Love (copy).mp3",
-        "track": "4",
-        "title": "Tough Love (feat. Agnes & Vargas & Lagola)",
-        "artist": "Avicii",
-        "genre": "Dance",
-        "duration": "03:01",
-        "status": "",
-        "song_dir": "C:\\Users\\Dave\\Pictures"
     }
 ]
