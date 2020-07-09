@@ -83,13 +83,37 @@ class MusicPlayer:
 
 
     def search_song_by(self, title="", artist="", genre=""):
-        result = ()
         def _isFound(song):
-            title_filter = (title.strip().lower() in song["name"].strip().lower())
+
+            def _is_possible_match(keyword, meta_keyword):
+                keyword_list = keyword.split()
+                # if keyword is more than 2 words...
+                if len(keyword_list) > 2:
+                    match_count = 0
+
+                    for word in keyword_list:
+                        # let's count matching words
+                        if word in meta_keyword:
+                            match_count += 1
+                    if match_count < 3:
+                        # not enough matching words
+                        return False
+                    else:
+                        # possible match found
+                        return True
+
+            title_filter = (title.strip().lower() in song["title"].strip().lower())
             artist_filter = (artist.strip().lower() in song["artist"].strip().lower())
             genre_filter = (genre.strip().lower() in song["genre"].strip().lower())
 
             if title and artist and genre:
+                if not title_filter:
+                    title_filter = _is_possible_match(title, song["title"].strip().lower())
+                if not artist_filter:
+                    artist_filter = _is_possible_match(artist, song["artist"].strip().lower())
+                if not genre_filter:
+                    genre_filter = _is_possible_match(genre, song["genre"].strip().lower())
+
                 if title == artist == genre:
                     return (title_filter or artist_filter or genre_filter)
                 elif title and artist:
@@ -109,9 +133,9 @@ class MusicPlayer:
                 filtered_playlist.append(song)
         
         if len(filtered_playlist) > 0:
-            return True, filtered_playlist
+            return filtered_playlist
         else:
-            return False, self.playlist
+            return None
 
 
     def load_media(self, is_playlist=True):
@@ -129,7 +153,7 @@ class MusicPlayer:
                     # append the parsed song to update_master_song_db
                     update_master_song_db.append(song)
 
-                self.playlist = update_master_song_db
+                # self.playlist = update_master_song_db
 
             else:
                 new_songs = []
@@ -149,10 +173,10 @@ class MusicPlayer:
                     master_song_db.extend(new_songs)
                     update_master_song_db = master_song_db
                     isUpdate = True
-                    self.playlist = new_songs
+                    # self.playlist = new_songs
                     
                 else:
-                    self.playlist = playlist
+                    # self.playlist = playlist
                     # we don't need to update the master list
                     return
 
@@ -233,7 +257,7 @@ class MusicPlayer:
             print(f"\tDiscovered song(s): {self.playlist_counter}")
 
         os.system("cls")
-        print(f"\nChecking music database...")
+        print(f"\n\tChecking music database...")
         time.sleep(1)
 
         # get music list from json database
@@ -361,7 +385,12 @@ class MusicPlayer:
         # finally, update the music library, if there are new music to add
         _update_music_db()
 
-        hasResult, playlist = self.search_song_by(self.title, self.artist, self.genre)
+        if self.title or self.artist or self.genre: 
+            filtered_playlist = self.search_song_by(self.title, self.artist, self.genre)
+            if filtered_playlist:
+                playlist = filtered_playlist
+            else:
+                playlist = []
 
         return playlist
 
@@ -398,7 +427,7 @@ class MusicPlayer:
                 return
 
         os.system("cls")
-        print(f"\n{'Shuffling' if self.toggle_shuffle else 'Loading'} playlist...")
+        print(f"\n\t{'Shuffling' if self.toggle_shuffle else 'Loading'} playlist...")
         time.sleep(1)
 
         # Internal method: actual music player for playlist, 
@@ -745,7 +774,7 @@ class MusicPlayer:
         # playlist music player
         if is_playlist or self.random_music:
             os.system("cls")
-            print(f"\n{'Shuffling' if self.toggle_shuffle else 'Loading'} playlist...")
+            print(f"\n\t{'Shuffling' if self.toggle_shuffle else 'Loading'} playlist...")
             time.sleep(1)
             
             if self.toggle_shuffle:
@@ -810,7 +839,7 @@ class MusicPlayer:
             self.audio_file = music_file
 
             os.system("cls")
-            print(f"\nLoading music...")
+            print(f"\n\tLoading music...")
             time.sleep(1)
             
             songname = self.playlist[0]["name"]
@@ -838,7 +867,7 @@ class MusicPlayer:
         if compact_mode:
             self.compact_music_player(is_playlist=is_playlist, playlist_folder=playlist_folder, music_file=music_file, play_shuffle=shuffle, play_all_music=play_all_music)
         else:
-            self.music_player(play_shuffle=shuffle,playlist_folder=playlist_folder, play_all_music=play_all_music)
+            self.music_player(play_shuffle=shuffle, playlist_folder=playlist_folder, play_all_music=play_all_music)
         return
 
 

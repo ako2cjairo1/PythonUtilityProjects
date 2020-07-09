@@ -6,10 +6,9 @@ SET title=%4
 SET artist=%5
 SET genre=%6
 
-CMDOW @ /ren "Music Player" /mov 445 -35 /siz 770 600
-CD "C:\Users\Dave\DEVENV\Python\PythonUtilityProjects"
-@ECHO Music Player is initiating...
+CD C:\Users\Dave\DEVENV\Python\PythonUtilityProjects
+@ECHO     Music Player is initiating...
 python musicplayer.py --option %option% --shuffle %shuffle% --mode %mode% --title %title% --artist %artist% --genre %genre%
 @ECHO Music Player closing...
-TIMEOUT 1
+timeout 1
 EXIT
