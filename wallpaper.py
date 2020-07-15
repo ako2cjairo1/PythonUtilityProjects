@@ -92,11 +92,11 @@ class Wallpaper:
 
         return image_name
 
+    def swap_dirs(self):
+        self.DOWNLOADED_DIR, self.WALLPAPER_DIR = self.WALLPAPER_DIR, self.DOWNLOADED_DIR
+
     def dynamic_change_wallpaper(self, frequency=60, clrscr=False):
         ticker = frequency
-
-        def _swap_dirs(dir1, dir2):
-            dir1, dir2 = dir2, dir1
 
         while True:
             if ticker >=  frequency:
@@ -124,7 +124,7 @@ class Wallpaper:
 
             # switch source folder to WALLPAPER DIR
             if keyboard.is_pressed("f3"):
-                _swap_dirs(self.DOWNLOADED_DIR, self.WALLPAPER_DIR)
+                self.swap_dirs()
                 ticker = frequency
 
             # copy the current wallpaper to wallpaper collection
