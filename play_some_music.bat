@@ -10,5 +10,5 @@ CD C:\Users\Dave\DEVENV\Python\PythonUtilityProjects
 @ECHO     Music Player is initiating...
 python musicplayer.py --option %option% --shuffle %shuffle% --mode %mode% --title %title% --artist %artist% --genre %genre%
 @ECHO Music Player closing...
-timeout 1
+TIMEOUT 1
 EXIT

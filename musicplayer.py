@@ -13,6 +13,7 @@ from pathlib import Path
 from itertools import repeat
 
 MUSIC_DB_FILE = "Music Database.json"
+PLAYER_SETTING = "Player Control.json"
 AUDIOFILE_EXT = ["wav", "mid","mp3", "aif"]
 TITLE_PADDING = 40
 ARTIST_NAME_PADDING = 20
@@ -395,6 +396,55 @@ class MusicPlayer:
         return playlist
 
 
+    def update_player_setting(self, setting):
+        settings = []
+        prev_setting = self.get_player_setting()
+        stat = prev_setting["status"]
+        vol = prev_setting["volume"]
+
+        try:
+            stat = setting["status"]
+        except:
+            # use previous setting when error occured
+            pass
+
+        try:
+            vol = setting["volume"]
+        except:
+            # use previous setting when error occured
+            pass
+    
+
+        settings.append({"status": stat, "volume": vol})    
+        
+        with open(PLAYER_SETTING, "w", encoding="utf-8") as fw:
+            json.dump(settings, fw, indent=4)
+            
+
+    def get_player_setting(self):
+        setting = [{"status": "Playing", "volume": 70}]
+        if os.path.isfile(PLAYER_SETTING):
+            with open(PLAYER_SETTING, "r") as fr:
+                setting = json.load(fr)
+
+        return setting[0]
+
+
+    def terminate_player(self):
+        setting = {"status": "close", "volume": 0}
+        self.update_player_setting(setting)
+
+
+    def start_player(self):
+        setting = {"status": "Playing", "volume": 70}
+        self.update_player_setting(setting)
+
+
+    def music_player_volume(self, value):
+        setting = {"volume": value}
+        self.update_player_setting(setting)
+        
+
     def update_playlist(self, song_name, key, value):
         # update self.playlist by song name, assuming song name is unique
         for song in [song for song in self.playlist if song["name"] == song_name]:
@@ -655,6 +705,7 @@ class MusicPlayer:
         def _play(music_name=""):
             # create a new instance of MediaPlayer using audio file
             self.player = vlc.MediaPlayer(self.audio_file)
+            self.setting_counter = 0
             arrow_counter = 0
             time_ticker = 0.1
             scroll_ticker = 0.1
@@ -701,8 +752,23 @@ class MusicPlayer:
                             print(f" {track_no} {title} {artist} {song['duration']}     {song['status']}")
                         break
 
+
+            def update_setting():
+                if self.setting_counter >= 10:
+                    setting = self.get_player_setting()
+
+                    if setting:
+                        if setting["status"] == "close":
+                            exit()
+                        if setting["volume"] != self.volume:
+                            self.volume = int(setting["volume"])
+                            self.player.audio_set_volume(self.volume)
+                        
+                    self.setting_counter = 0
+
             status = "Done"
             try:
+                setting = None
                 self.player.play()
                 time.sleep(1)
                 self.player.audio_set_volume(self.volume)
@@ -710,6 +776,9 @@ class MusicPlayer:
 
                 while self.player.is_playing() or state.Paused:
                     status = "Done"
+
+                    # get or set updates on player settings
+                    update_setting()
 
                     # stop the song
                     if keyboard.is_pressed("f4"):
@@ -759,6 +828,7 @@ class MusicPlayer:
                         arrow_counter = 0
 
                     time.sleep(0.1)
+                    self.setting_counter += 1
                     
                     # song ended return and get the next song on the list
                     if state == state.Ended:
@@ -767,9 +837,12 @@ class MusicPlayer:
                 self.player.stop()
                 return (True, status)
                 
-            except Exception:
+            except Exception as ex:
                 return (False, "Can't play")
 
+        # update the setting as a started playing.
+        # this is used to flag other instances of the music player
+        self.start_player()
 
         # playlist music player
         if is_playlist or self.random_music:
