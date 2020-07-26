@@ -487,6 +487,7 @@ class MusicPlayer:
             self.player = vlc.MediaPlayer(f"{self.folder_dir}/{current_song}")
             arrow_counter = 0
             time_ticker = 0
+            self.setting_counter = 0
 
             def _show_playlist(status):
                 os.system("cls")
@@ -549,6 +550,20 @@ class MusicPlayer:
                 else:
                     print(f" {len(self.playlist)} songs on the playlist...")
 
+
+            def update_setting():
+                if self.setting_counter >= 10:
+                    setting = self.get_player_setting()
+
+                    if setting:
+                        if setting["status"] == "close":
+                            exit()
+                        if setting["volume"] != self.volume:
+                            self.volume = int(setting["volume"])
+                            self.player.audio_set_volume(self.volume)
+                        
+                    self.setting_counter = 0
+
             status = "Done"
             try:
                 self.player.play()
@@ -558,6 +573,9 @@ class MusicPlayer:
 
                 while self.player.is_playing() or state.Paused:
                     status = "Done"
+
+                    # get or set updates on player settings
+                    update_setting()
 
                     # stop the song
                     if keyboard.is_pressed("f4"):
@@ -573,6 +591,8 @@ class MusicPlayer:
                             self.player.pause()
                         else:
                             self.player.play()
+                        # to avoid trigger multiple times at once
+                        time.sleep(1) 
                     # skip the song
                     elif keyboard.is_pressed("f10"):
                         status = "Skipped"
@@ -583,10 +603,12 @@ class MusicPlayer:
                     elif keyboard.is_pressed("f12"):
                         if 0 < self.volume < 100:
                             self.volume -= 2
+                            self.player.audio_set_volume(self.volume)
                     # volume up
                     elif keyboard.is_pressed("ins"):
                         if 0 < self.volume < 100:
                             self.volume += 2
+                            self.player.audio_set_volume(self.volume)
 
                     # get song state every second
                     state = self.player.get_state()
@@ -693,7 +715,7 @@ class MusicPlayer:
             # load media and parse meta information
             self.playlist = self.load_media(is_playlist=is_playlist)
             # set the location of command prompt (music player view)
-            os.system("CMDOW @ /ren \"Music Player\" /mov 601 -35 /siz 790 110")
+            os.system("CMDOW @ /ren \"Music Player\" /mov 601 -35 /siz 790 103")
 
             if len(self.playlist) <= 0:
                 print("\n**No audio file found.")
@@ -726,6 +748,7 @@ class MusicPlayer:
                             status = "   Paused"
 
                     return status
+
 
                 # song names list, sliced to 25 songs
                 for song in self.playlist:
@@ -804,10 +827,12 @@ class MusicPlayer:
                     elif keyboard.is_pressed("f12"):
                         if 0 < self.volume < 100:
                             self.volume -= 2
+                            self.player.audio_set_volume(self.volume)
                     # volume up
                     elif keyboard.is_pressed("ins"):
                         if 0 < self.volume < 100:
                             self.volume += 2
+                            self.player.audio_set_volume(self.volume)
     
                     # get song state every second
                     state = self.player.get_state()

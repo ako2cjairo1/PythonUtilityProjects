@@ -1,20 +1,11 @@
 import time
-from win10toast import ToastNotifier
+from plyer import notification
 
 
 class ToastMessage:
-    def send_toast(self, title, message):
-        # one-time initialization
-        toaster = ToastNotifier()
 
-        # show notification whenever needed
-        toaster.show_toast(title=title, msg=message, threaded=True,
-                           icon_path='brenda.ico', duration=15)  # in seconds
-
-        # To check if any notifications are active, use 'toaster.notification_active()'
-        # wait for threaded notification to finish
-        while toaster.notification_active():
-            time.sleep(0.1)
+    def send_toast(self, title, message, app_name="Virtual Assistant", duration=600):
+        notification.notify(title=title, message=message, app_icon="C:\\Users\\Dave\\DEVENV\\Python\\PythonUtilityProjects\\brenda.ico", timeout=duration)
 
 
 if __name__ == "__main__":
