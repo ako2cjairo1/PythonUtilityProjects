@@ -1,0 +1,74 @@
+[
+    {
+        "mac address": "1c:1e:e3:f1:47:61",
+        "ip address": "",
+        "alias": "TCL TV",
+        "status": "Offline"
+    },
+    {
+        "mac address": "74:29:af:28:be:fb",
+        "ip address": "",
+        "alias": "Christian-Laptop",
+        "status": "Offline"
+    },
+    {
+        "mac address": "80:0c:67:9f:2f:fa",
+        "ip address": "",
+        "alias": "JaiPhone-XI",
+        "status": "Offline"
+    },
+    {
+        "mac address": "28:02:d8:39:72:54",
+        "ip address": "",
+        "alias": "Mom's Phone",
+        "status": "Offline"
+    },
+    {
+        "mac address": "24:a0:74:13:4e:4d",
+        "ip address": "",
+        "alias": "Ibyang",
+        "status": "Offline"
+    },
+    {
+        "mac address": "a4:5e:60:0b:c2:14",
+        "ip address": "",
+        "alias": "Jemimas-iPhone",
+        "status": "Offline"
+    },
+    {
+        "mac address": "d4:6d:6d:ca:bc:d2",
+        "ip address": "",
+        "alias": "Jemima's Work Laptop",
+        "status": "Offline"
+    },
+    {
+        "mac address": "c4:ab:b2:72:5d:cc",
+        "ip address": "",
+        "alias": "Istian's Vivo Phone",
+        "status": "Offline"
+    },
+    {
+        "mac address": "60:9a:c1:4d:3e:31",
+        "ip address": "",
+        "alias": "JaiWatch",
+        "status": "Offline"
+    },
+    {
+        "mac address": "80:35:c1:66:c9:5c",
+        "ip address": "",
+        "alias": "Alec's Phone",
+        "status": "Offline"
+    },
+    {
+        "mac address": "70:de:e2:5d:72:18",
+        "ip address": "",
+        "alias": "JaiPad",
+        "status": "Offline"
+    },
+    {
+        "mac address": "f0:43:47:d5:57:b0",
+        "ip address": "",
+        "alias": "Dad's Phone",
+        "status": "Offline"
+    }
+]
