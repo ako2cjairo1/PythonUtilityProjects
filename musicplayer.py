@@ -241,7 +241,7 @@ class MusicPlayer:
                     genre = "" if media.get_meta(
                         2) is None else media.get_meta(2)
                     # track number from meta data
-                    track_no = 0 if media.get_meta(
+                    track_no = "1" if media.get_meta(
                         5) is None else media.get_meta(5)
                     # song length in timedelta format (mm:ss.micro seconds)
                     duration = self.get_duration(media=media)
@@ -578,7 +578,7 @@ class MusicPlayer:
                     print(f" {len(self.playlist)} songs on the playlist...")
 
             def update_setting():
-                if self.setting_counter >= 10:
+                if self.setting_counter >= 1:
                     setting = self.get_player_setting()
 
                     if setting:
@@ -651,6 +651,7 @@ class MusicPlayer:
                         arrow_counter = 0
 
                     time.sleep(1)
+                    self.setting_counter += 1
 
                     # song ended return and get the next song on the list
                     if state == state.Ended:
@@ -661,6 +662,10 @@ class MusicPlayer:
 
             except Exception:
                 return (False, "Can't play")
+
+        # update the setting as a started playing.
+        # this is used to flag other instances of the music player
+        self.start_player()
 
         # Main function of music_player
         # shuffle mode playlist iterator
@@ -805,7 +810,7 @@ class MusicPlayer:
                             # update the "duration" meta data if it has no (--:--) duration value
                             if song['duration'] == "--:--":
                                 self.update_playlist(
-                                    current_song, key="duration", value=duration)
+                                    music_name, key="duration", value=duration)
                         else:
                             print(
                                 f" {track_no} {title} {artist} {song['duration']}     {song['status']}")

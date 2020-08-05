@@ -5,7 +5,7 @@
         "title": "Something Just Like This",
         "artist": "The Chainsmokers & Coldplay",
         "genre": "Dance",
-        "duration": "03:58",
+        "duration": "--:--",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Documents\\Macbook Air BACKUP\\Downloads"
     },
@@ -320,6 +320,206 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Bazzi - COSMIC (2018)"
     },
     {
+        "name": "01 - It Will Rain.mp3",
+        "track": "1",
+        "title": "It Will Rain",
+        "artist": "Bruno Mars",
+        "genre": "R&B",
+        "duration": "04:08",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Bruno Mars - Greatest Songs (2018)\\Bruno Mars - Greatest Songs (2018)"
+    },
+    {
+        "name": "02 - When I Was Your Man.mp3",
+        "track": "2",
+        "title": "When I Was Your Man",
+        "artist": "Bruno Mars",
+        "genre": "R&B",
+        "duration": "03:24",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Bruno Mars - Greatest Songs (2018)\\Bruno Mars - Greatest Songs (2018)"
+    },
+    {
+        "name": "03 - Runaway Baby.mp3",
+        "track": "3",
+        "title": "Runaway Baby",
+        "artist": "Bruno Mars",
+        "genre": "R&B",
+        "duration": "02:19",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Bruno Mars - Greatest Songs (2018)\\Bruno Mars - Greatest Songs (2018)"
+    },
+    {
+        "name": "04 - 24K Magic.mp3",
+        "track": "4",
+        "title": "24K Magic",
+        "artist": "Bruno Mars",
+        "genre": "R&B",
+        "duration": "03:37",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Bruno Mars - Greatest Songs (2018)\\Bruno Mars - Greatest Songs (2018)"
+    },
+    {
+        "name": "05 - Grenade.mp3",
+        "track": "5",
+        "title": "Grenade",
+        "artist": "Bruno Mars",
+        "genre": "R&B",
+        "duration": "03:32",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Bruno Mars - Greatest Songs (2018)\\Bruno Mars - Greatest Songs (2018)"
+    },
+    {
+        "name": "06 - Talking To The Moon.mp3",
+        "track": "6",
+        "title": "Talking To The Moon",
+        "artist": "Bruno Mars",
+        "genre": "R&B",
+        "duration": "03:28",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Bruno Mars - Greatest Songs (2018)\\Bruno Mars - Greatest Songs (2018)"
+    },
+    {
+        "name": "07 - Locked Out Of Heaven.mp3",
+        "track": "7",
+        "title": "Locked Out Of Heaven",
+        "artist": "Bruno Mars",
+        "genre": "R&B",
+        "duration": "03:44",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Bruno Mars - Greatest Songs (2018)\\Bruno Mars - Greatest Songs (2018)"
+    },
+    {
+        "name": "08 - Marry You.mp3",
+        "track": "8",
+        "title": "Marry You",
+        "artist": "Bruno Mars",
+        "genre": "R&B",
+        "duration": "03:40",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Bruno Mars - Greatest Songs (2018)\\Bruno Mars - Greatest Songs (2018)"
+    },
+    {
+        "name": "09 - Gorilla.mp3",
+        "track": "9",
+        "title": "Gorilla",
+        "artist": "Bruno Mars",
+        "genre": "R&B",
+        "duration": "03:55",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Bruno Mars - Greatest Songs (2018)\\Bruno Mars - Greatest Songs (2018)"
+    },
+    {
+        "name": "10 - Treasure.mp3",
+        "track": "10",
+        "title": "Treasure",
+        "artist": "Bruno Mars",
+        "genre": "R&B",
+        "duration": "02:49",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Bruno Mars - Greatest Songs (2018)\\Bruno Mars - Greatest Songs (2018)"
+    },
+    {
+        "name": "11 - Young Girls.mp3",
+        "track": "11",
+        "title": "Young Girls",
+        "artist": "Bruno Mars",
+        "genre": "R&B",
+        "duration": "03:39",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Bruno Mars - Greatest Songs (2018)\\Bruno Mars - Greatest Songs (2018)"
+    },
+    {
+        "name": "12 - Thats What I Like.mp3",
+        "track": "12",
+        "title": "Thats What I Like",
+        "artist": "Bruno Mars",
+        "genre": "R&B",
+        "duration": "03:17",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Bruno Mars - Greatest Songs (2018)\\Bruno Mars - Greatest Songs (2018)"
+    },
+    {
+        "name": "13 - Perm.mp3",
+        "track": "13",
+        "title": "Perm",
+        "artist": "Bruno Mars",
+        "genre": "R&B",
+        "duration": "03:20",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Bruno Mars - Greatest Songs (2018)\\Bruno Mars - Greatest Songs (2018)"
+    },
+    {
+        "name": "14 - Versace On The Floor.mp3",
+        "track": "14",
+        "title": "Versace On The Floor",
+        "artist": "Bruno Mars",
+        "genre": "R&B",
+        "duration": "04:11",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Bruno Mars - Greatest Songs (2018)\\Bruno Mars - Greatest Songs (2018)"
+    },
+    {
+        "name": "15 - Liquor Store Blues (Ft. Damian Marley).mp3",
+        "track": "15",
+        "title": "Liquor Store Blues (Ft. Damian Marley)",
+        "artist": "Bruno Mars",
+        "genre": "R&B",
+        "duration": "03:39",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Bruno Mars - Greatest Songs (2018)\\Bruno Mars - Greatest Songs (2018)"
+    },
+    {
+        "name": "16 - Finesse.mp3",
+        "track": "16",
+        "title": "Finesse",
+        "artist": "Bruno Mars",
+        "genre": "R&B",
+        "duration": "03:01",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Bruno Mars - Greatest Songs (2018)\\Bruno Mars - Greatest Songs (2018)"
+    },
+    {
+        "name": "17 - Chunky.mp3",
+        "track": "17",
+        "title": "Chunky",
+        "artist": "Bruno Mars",
+        "genre": "R&B",
+        "duration": "02:57",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Bruno Mars - Greatest Songs (2018)\\Bruno Mars - Greatest Songs (2018)"
+    },
+    {
+        "name": "18 - The Lazy Song.mp3",
+        "track": "18",
+        "title": "The Lazy Song",
+        "artist": "Bruno Mars",
+        "genre": "R&B",
+        "duration": "03:06",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Bruno Mars - Greatest Songs (2018)\\Bruno Mars - Greatest Songs (2018)"
+    },
+    {
+        "name": "19 - Count On Me.mp3",
+        "track": "19",
+        "title": "Count On Me",
+        "artist": "Bruno Mars",
+        "genre": "R&B",
+        "duration": "03:08",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Bruno Mars - Greatest Songs (2018)\\Bruno Mars - Greatest Songs (2018)"
+    },
+    {
+        "name": "20 - Just The Way You Are.mp3",
+        "track": "20",
+        "title": "Just The Way You Are",
+        "artist": "Bruno Mars",
+        "genre": "R&B",
+        "duration": "03:31",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Bruno Mars - Greatest Songs (2018)\\Bruno Mars - Greatest Songs (2018)"
+    },
+    {
         "name": "1 Slide (feat. Frank Ocean & Migos).mp3",
         "track": "1",
         "title": "Slide (feat. Frank Ocean & Migos)",
@@ -608,6 +808,226 @@
         "duration": "03:50",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\Childish Gambino - Because The Internet [Deluxe Edition @ 320] 2013"
+    },
+    {
+        "name": "01. Sunrise.mp3",
+        "track": "1",
+        "title": "Sunrise",
+        "artist": "Coldplay",
+        "genre": "Rock",
+        "duration": "02:21",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Coldplay - Everyday Life (2019)"
+    },
+    {
+        "name": "02. Church.mp3",
+        "track": "2",
+        "title": "Church",
+        "artist": "Coldplay",
+        "genre": "Rock",
+        "duration": "03:40",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Coldplay - Everyday Life (2019)"
+    },
+    {
+        "name": "03. Trouble In Town.mp3",
+        "track": "3",
+        "title": "Trouble In Town",
+        "artist": "Coldplay",
+        "genre": "Rock",
+        "duration": "04:29",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Coldplay - Everyday Life (2019)"
+    },
+    {
+        "name": "04. BrokEn.mp3",
+        "track": "4",
+        "title": "BrokEn",
+        "artist": "Coldplay",
+        "genre": "Rock",
+        "duration": "02:20",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Coldplay - Everyday Life (2019)"
+    },
+    {
+        "name": "05. Daddy.mp3",
+        "track": "5",
+        "title": "Daddy",
+        "artist": "Coldplay",
+        "genre": "Rock",
+        "duration": "04:48",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Coldplay - Everyday Life (2019)"
+    },
+    {
+        "name": "06. WOTWPOTP.mp3",
+        "track": "6",
+        "title": "WOTW/POTP",
+        "artist": "Coldplay",
+        "genre": "Rock",
+        "duration": "01:07",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Coldplay - Everyday Life (2019)"
+    },
+    {
+        "name": "07. Arabesque.mp3",
+        "track": "7",
+        "title": "Arabesque",
+        "artist": "Coldplay",
+        "genre": "Rock",
+        "duration": "05:30",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Coldplay - Everyday Life (2019)"
+    },
+    {
+        "name": "08. When I Need A Friend.mp3",
+        "track": "8",
+        "title": "When I Need A Friend",
+        "artist": "Coldplay",
+        "genre": "Rock",
+        "duration": "02:25",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Coldplay - Everyday Life (2019)"
+    },
+    {
+        "name": "09. SunriseSunset Interlude #1.mp3",
+        "track": "9",
+        "title": "Sunrise/Sunset Interlude #1",
+        "artist": "Coldplay",
+        "genre": "Rock",
+        "duration": "--:--",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Coldplay - Everyday Life (2019)"
+    },
+    {
+        "name": "10. SunriseSunset Interlude #2.mp3",
+        "track": "10",
+        "title": "Sunrise/Sunset Interlude #2",
+        "artist": "Coldplay",
+        "genre": "Rock",
+        "duration": "--:--",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Coldplay - Everyday Life (2019)"
+    },
+    {
+        "name": "11. SunriseSunset Interlude #3.mp3",
+        "track": "11",
+        "title": "Sunrise/Sunset Interlude #3",
+        "artist": "Coldplay",
+        "genre": "Rock",
+        "duration": "--:--",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Coldplay - Everyday Life (2019)"
+    },
+    {
+        "name": "12. SunriseSunset Interlude #4.mp3",
+        "track": "12",
+        "title": "Sunrise/Sunset Interlude #4",
+        "artist": "Coldplay",
+        "genre": "Rock",
+        "duration": "--:--",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Coldplay - Everyday Life (2019)"
+    },
+    {
+        "name": "13. SunriseSunset Interlude #5.mp3",
+        "track": "13",
+        "title": "Sunrise/Sunset Interlude #5",
+        "artist": "Coldplay",
+        "genre": "Rock",
+        "duration": "--:--",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Coldplay - Everyday Life (2019)"
+    },
+    {
+        "name": "14. SunriseSunset Interlude #6.mp3",
+        "track": "14",
+        "title": "Sunrise/Sunset Interlude #6",
+        "artist": "Coldplay",
+        "genre": "Rock",
+        "duration": "--:--",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Coldplay - Everyday Life (2019)"
+    },
+    {
+        "name": "15. Guns.mp3",
+        "track": "15",
+        "title": "Guns",
+        "artist": "Coldplay",
+        "genre": "Rock",
+        "duration": "01:45",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Coldplay - Everyday Life (2019)"
+    },
+    {
+        "name": "16. Orphans.mp3",
+        "track": "16",
+        "title": "Orphans",
+        "artist": "Coldplay",
+        "genre": "Rock",
+        "duration": "03:08",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Coldplay - Everyday Life (2019)"
+    },
+    {
+        "name": "17. Eko.mp3",
+        "track": "17",
+        "title": "Eko",
+        "artist": "Coldplay",
+        "genre": "Rock",
+        "duration": "02:28",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Coldplay - Everyday Life (2019)"
+    },
+    {
+        "name": "18. Cry Cry Cry.mp3",
+        "track": "18",
+        "title": "Cry Cry Cry",
+        "artist": "Coldplay",
+        "genre": "Rock",
+        "duration": "02:37",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Coldplay - Everyday Life (2019)"
+    },
+    {
+        "name": "19. Old Friends.mp3",
+        "track": "19",
+        "title": "Old Friends",
+        "artist": "Coldplay",
+        "genre": "Rock",
+        "duration": "02:17",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Coldplay - Everyday Life (2019)"
+    },
+    {
+        "name": "20. Bani Adam.mp3",
+        "track": "20",
+        "title": "Bani Adam",
+        "artist": "Coldplay",
+        "genre": "Rock",
+        "duration": "03:05",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Coldplay - Everyday Life (2019)"
+    },
+    {
+        "name": "21. Champion Of The World.mp3",
+        "track": "21",
+        "title": "Champion Of The World",
+        "artist": "Coldplay",
+        "genre": "Rock",
+        "duration": "04:08",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Coldplay - Everyday Life (2019)"
+    },
+    {
+        "name": "22. Everyday Life.mp3",
+        "track": "22",
+        "title": "Everyday Life",
+        "artist": "Coldplay",
+        "genre": "Rock",
+        "duration": "04:09",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Coldplay - Everyday Life (2019)"
     },
     {
         "name": "101-crowded_house-now_were_getting_somewhere-caheso.mp3",
@@ -930,6 +1350,136 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Crowded_House-The_Very_Very_Best_Of_Crowded_House-2CD-2010-CaHeSo"
     },
     {
+        "name": "01. INTRO.mp3",
+        "track": "1",
+        "title": "INTRO",
+        "artist": "DaBaby",
+        "genre": "RapHipHop",
+        "duration": "02:43",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\DaBaby - KIRK (2019)\\DaBaby - KIRK (2019)"
+    },
+    {
+        "name": "02. OFF THE RIP.mp3",
+        "track": "2",
+        "title": "OFF THE RIP",
+        "artist": "DaBaby",
+        "genre": "RapHipHop",
+        "duration": "01:46",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\DaBaby - KIRK (2019)\\DaBaby - KIRK (2019)"
+    },
+    {
+        "name": "03. BOP.mp3",
+        "track": "3",
+        "title": "BOP",
+        "artist": "DaBaby",
+        "genre": "RapHipHop",
+        "duration": "02:30",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\DaBaby - KIRK (2019)\\DaBaby - KIRK (2019)"
+    },
+    {
+        "name": "04. VIBEZ.mp3",
+        "track": "4",
+        "title": "VIBEZ",
+        "artist": "DaBaby",
+        "genre": "RapHipHop",
+        "duration": "02:15",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\DaBaby - KIRK (2019)\\DaBaby - KIRK (2019)"
+    },
+    {
+        "name": "05. POP STAR.mp3",
+        "track": "5",
+        "title": "POP STAR",
+        "artist": "DaBaby, Kevin Gates",
+        "genre": "RapHipHop",
+        "duration": "02:53",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\DaBaby - KIRK (2019)\\DaBaby - KIRK (2019)"
+    },
+    {
+        "name": "06. GOSPEL.mp3",
+        "track": "6",
+        "title": "GOSPEL",
+        "artist": "DaBaby, Chance the Rapper, Gucci Mane, Yk Osiris",
+        "genre": "RapHipHop",
+        "duration": "03:25",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\DaBaby - KIRK (2019)\\DaBaby - KIRK (2019)"
+    },
+    {
+        "name": "07. iPHONE.mp3",
+        "track": "7",
+        "title": "iPHONE",
+        "artist": "DaBaby, Nicki Minaj",
+        "genre": "RapHipHop",
+        "duration": "03:02",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\DaBaby - KIRK (2019)\\DaBaby - KIRK (2019)"
+    },
+    {
+        "name": "08. TOES.mp3",
+        "track": "8",
+        "title": "TOES",
+        "artist": "DaBaby, Lil Baby, Moneybagg Yo",
+        "genre": "RapHipHop",
+        "duration": "02:06",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\DaBaby - KIRK (2019)\\DaBaby - KIRK (2019)"
+    },
+    {
+        "name": "09. REALLY.mp3",
+        "track": "9",
+        "title": "REALLY",
+        "artist": "DaBaby, Stunna 4 Vegas",
+        "genre": "RapHipHop",
+        "duration": "02:10",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\DaBaby - KIRK (2019)\\DaBaby - KIRK (2019)"
+    },
+    {
+        "name": "10. PROLLY HEARD.mp3",
+        "track": "10",
+        "title": "PROLLY HEARD",
+        "artist": "DaBaby",
+        "genre": "RapHipHop",
+        "duration": "02:13",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\DaBaby - KIRK (2019)\\DaBaby - KIRK (2019)"
+    },
+    {
+        "name": "11. RAW SHIT.mp3",
+        "track": "11",
+        "title": "RAW SHIT",
+        "artist": "DaBaby, migos",
+        "genre": "RapHipHop",
+        "duration": "03:27",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\DaBaby - KIRK (2019)\\DaBaby - KIRK (2019)"
+    },
+    {
+        "name": "12. THERE HE GO.mp3",
+        "track": "12",
+        "title": "THERE HE GO",
+        "artist": "DaBaby",
+        "genre": "RapHipHop",
+        "duration": "02:13",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\DaBaby - KIRK (2019)\\DaBaby - KIRK (2019)"
+    },
+    {
+        "name": "13. XXL.mp3",
+        "track": "13",
+        "title": "XXL",
+        "artist": "DaBaby",
+        "genre": "RapHipHop",
+        "duration": "02:24",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\DaBaby - KIRK (2019)\\DaBaby - KIRK (2019)"
+    },
+    {
         "name": "01 - Get You (feat. Kali Uchis).mp3",
         "track": "1",
         "title": "Get You (feat. Kali Uchis)",
@@ -1028,6 +1578,396 @@
         "duration": "09:52",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\Daniel Caesar - Freudian (2017)"
+    },
+    {
+        "name": "01 Deep Pockets.mp3",
+        "track": "1",
+        "title": "Deep Pockets",
+        "artist": "Drake",
+        "genre": "Hip-Hop/Rap",
+        "duration": "03:33",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Drake - Dark Lane Demo Tapes (2020)"
+    },
+    {
+        "name": "02 When To Say When.mp3",
+        "track": "2",
+        "title": "When To Say When",
+        "artist": "Drake",
+        "genre": "Hip-Hop/Rap",
+        "duration": "03:33",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Drake - Dark Lane Demo Tapes (2020)"
+    },
+    {
+        "name": "03 Chicago Freestyle (feat. Giveon).mp3",
+        "track": "3",
+        "title": "Chicago Freestyle (feat. Giveon)",
+        "artist": "Drake",
+        "genre": "Hip-Hop/Rap",
+        "duration": "03:31",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Drake - Dark Lane Demo Tapes (2020)"
+    },
+    {
+        "name": "04 Not You Too (feat. Chris Brown).mp3",
+        "track": "4",
+        "title": "Not You Too (feat. Chris Brown)",
+        "artist": "Drake",
+        "genre": "Hip-Hop/Rap",
+        "duration": "04:20",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Drake - Dark Lane Demo Tapes (2020)"
+    },
+    {
+        "name": "05 Toosie Slide.mp3",
+        "track": "5",
+        "title": "Toosie Slide",
+        "artist": "Drake",
+        "genre": "Hip-Hop/Rap",
+        "duration": "03:57",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Drake - Dark Lane Demo Tapes (2020)"
+    },
+    {
+        "name": "06 Desires (feat. Future).mp3",
+        "track": "6",
+        "title": "Desires (feat. Future)",
+        "artist": "Drake",
+        "genre": "Hip-Hop/Rap",
+        "duration": "03:48",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Drake - Dark Lane Demo Tapes (2020)"
+    },
+    {
+        "name": "07 Time Flies.mp3",
+        "track": "7",
+        "title": "Time Flies",
+        "artist": "Drake",
+        "genre": "Hip-Hop/Rap",
+        "duration": "03:03",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Drake - Dark Lane Demo Tapes (2020)"
+    },
+    {
+        "name": "08 Landed.mp3",
+        "track": "8",
+        "title": "Landed",
+        "artist": "Drake",
+        "genre": "Hip-Hop/Rap",
+        "duration": "02:22",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Drake - Dark Lane Demo Tapes (2020)"
+    },
+    {
+        "name": "09 D4L.mp3",
+        "track": "9",
+        "title": "D4L",
+        "artist": "Future, Drake & Young Thug",
+        "genre": "Hip-Hop/Rap",
+        "duration": "02:59",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Drake - Dark Lane Demo Tapes (2020)"
+    },
+    {
+        "name": "10 Pain 1993 (feat. Playboi Carti).mp3",
+        "track": "10",
+        "title": "Pain 1993 (feat. Playboi Carti)",
+        "artist": "Drake",
+        "genre": "Hip-Hop/Rap",
+        "duration": "02:19",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Drake - Dark Lane Demo Tapes (2020)"
+    },
+    {
+        "name": "11 Losses.mp3",
+        "track": "11",
+        "title": "Losses",
+        "artist": "Drake",
+        "genre": "Hip-Hop/Rap",
+        "duration": "04:21",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Drake - Dark Lane Demo Tapes (2020)"
+    },
+    {
+        "name": "12 From Florida With Love.mp3",
+        "track": "12",
+        "title": "From Florida With Love",
+        "artist": "Drake",
+        "genre": "Hip-Hop/Rap",
+        "duration": "03:45",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Drake - Dark Lane Demo Tapes (2020)"
+    },
+    {
+        "name": "13 Demons (feat. Fivio Foreign & Sos.mp3",
+        "track": "13",
+        "title": "Demons (feat. Fivio Foreign & Sosa Geek)",
+        "artist": "Drake",
+        "genre": "Hip-Hop/Rap",
+        "duration": "03:15",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Drake - Dark Lane Demo Tapes (2020)"
+    },
+    {
+        "name": "14 War.mp3",
+        "track": "14",
+        "title": "War",
+        "artist": "Drake",
+        "genre": "Hip-Hop/Rap",
+        "duration": "02:50",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Drake - Dark Lane Demo Tapes (2020)"
+    },
+    {
+        "name": "01 Genesis.mp3",
+        "track": "1",
+        "title": "Genesis",
+        "artist": "Dua Lipa",
+        "genre": "Pop",
+        "duration": "03:16",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Dua Lipa - Dua Lipa (Complete Edition) (2018)\\Dua Lipa - Dua Lipa (Complete Edition)"
+    },
+    {
+        "name": "02 Lost In Your Light (feat. Miguel).mp3",
+        "track": "2",
+        "title": "Lost In Your Light (feat. Miguel)",
+        "artist": "Dua Lipa, Miguel",
+        "genre": "Pop",
+        "duration": "03:14",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Dua Lipa - Dua Lipa (Complete Edition) (2018)\\Dua Lipa - Dua Lipa (Complete Edition)"
+    },
+    {
+        "name": "03 Hotter Than Hell.mp3",
+        "track": "3",
+        "title": "Hotter Than Hell",
+        "artist": "Dua Lipa",
+        "genre": "Pop",
+        "duration": "02:58",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Dua Lipa - Dua Lipa (Complete Edition) (2018)\\Dua Lipa - Dua Lipa (Complete Edition)"
+    },
+    {
+        "name": "04 Be The One.mp3",
+        "track": "4",
+        "title": "Be The One",
+        "artist": "Dua Lipa",
+        "genre": "Pop",
+        "duration": "03:13",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Dua Lipa - Dua Lipa (Complete Edition) (2018)\\Dua Lipa - Dua Lipa (Complete Edition)"
+    },
+    {
+        "name": "05 IDGAF.mp3",
+        "track": "5",
+        "title": "IDGAF",
+        "artist": "Dua Lipa",
+        "genre": "Pop",
+        "duration": "03:28",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Dua Lipa - Dua Lipa (Complete Edition) (2018)\\Dua Lipa - Dua Lipa (Complete Edition)"
+    },
+    {
+        "name": "06 Blow Your Mind (Mwah).mp3",
+        "track": "6",
+        "title": "Blow Your Mind (Mwah)",
+        "artist": "Dua Lipa",
+        "genre": "Pop",
+        "duration": "02:49",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Dua Lipa - Dua Lipa (Complete Edition) (2018)\\Dua Lipa - Dua Lipa (Complete Edition)"
+    },
+    {
+        "name": "07 Garden.mp3",
+        "track": "7",
+        "title": "Garden",
+        "artist": "Dua Lipa",
+        "genre": "Pop",
+        "duration": "03:38",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Dua Lipa - Dua Lipa (Complete Edition) (2018)\\Dua Lipa - Dua Lipa (Complete Edition)"
+    },
+    {
+        "name": "08 No Goodbyes.mp3",
+        "track": "8",
+        "title": "No Goodbyes",
+        "artist": "Dua Lipa",
+        "genre": "Pop",
+        "duration": "03:26",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Dua Lipa - Dua Lipa (Complete Edition) (2018)\\Dua Lipa - Dua Lipa (Complete Edition)"
+    },
+    {
+        "name": "09 Thinking 'Bout You.mp3",
+        "track": "9",
+        "title": "Thinking 'Bout You",
+        "artist": "Dua Lipa",
+        "genre": "Pop",
+        "duration": "02:42",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Dua Lipa - Dua Lipa (Complete Edition) (2018)\\Dua Lipa - Dua Lipa (Complete Edition)"
+    },
+    {
+        "name": "10 New Rules.mp3",
+        "track": "10",
+        "title": "New Rules",
+        "artist": "Dua Lipa",
+        "genre": "Pop",
+        "duration": "03:19",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Dua Lipa - Dua Lipa (Complete Edition) (2018)\\Dua Lipa - Dua Lipa (Complete Edition)"
+    },
+    {
+        "name": "11 Begging.mp3",
+        "track": "11",
+        "title": "Begging",
+        "artist": "Dua Lipa",
+        "genre": "Pop",
+        "duration": "03:04",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Dua Lipa - Dua Lipa (Complete Edition) (2018)\\Dua Lipa - Dua Lipa (Complete Edition)"
+    },
+    {
+        "name": "12 Homesick.mp3",
+        "track": "12",
+        "title": "Homesick",
+        "artist": "Dua Lipa",
+        "genre": "Pop",
+        "duration": "03:41",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Dua Lipa - Dua Lipa (Complete Edition) (2018)\\Dua Lipa - Dua Lipa (Complete Edition)"
+    },
+    {
+        "name": "13 Dreams.mp3",
+        "track": "13",
+        "title": "Dreams",
+        "artist": "Dua Lipa",
+        "genre": "Pop",
+        "duration": "03:30",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Dua Lipa - Dua Lipa (Complete Edition) (2018)\\Dua Lipa - Dua Lipa (Complete Edition)"
+    },
+    {
+        "name": "14 Room For 2.mp3",
+        "track": "14",
+        "title": "Room For 2",
+        "artist": "Dua Lipa",
+        "genre": "Pop",
+        "duration": "03:19",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Dua Lipa - Dua Lipa (Complete Edition) (2018)\\Dua Lipa - Dua Lipa (Complete Edition)"
+    },
+    {
+        "name": "15 New Love.mp3",
+        "track": "15",
+        "title": "New Love",
+        "artist": "Dua Lipa",
+        "genre": "Pop",
+        "duration": "04:22",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Dua Lipa - Dua Lipa (Complete Edition) (2018)\\Dua Lipa - Dua Lipa (Complete Edition)"
+    },
+    {
+        "name": "16 Bad Together.mp3",
+        "track": "16",
+        "title": "Bad Together",
+        "artist": "Dua Lipa",
+        "genre": "Pop",
+        "duration": "03:49",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Dua Lipa - Dua Lipa (Complete Edition) (2018)\\Dua Lipa - Dua Lipa (Complete Edition)"
+    },
+    {
+        "name": "17 Last Dance.mp3",
+        "track": "17",
+        "title": "Last Dance",
+        "artist": "Dua Lipa",
+        "genre": "Pop",
+        "duration": "03:39",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Dua Lipa - Dua Lipa (Complete Edition) (2018)\\Dua Lipa - Dua Lipa (Complete Edition)"
+    },
+    {
+        "name": "18 Want To.mp3",
+        "track": "18",
+        "title": "Want To",
+        "artist": "Dua Lipa",
+        "genre": "Pop",
+        "duration": "03:22",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Dua Lipa - Dua Lipa (Complete Edition) (2018)\\Dua Lipa - Dua Lipa (Complete Edition)"
+    },
+    {
+        "name": "19 Running.mp3",
+        "track": "19",
+        "title": "Running",
+        "artist": "Dua Lipa",
+        "genre": "Pop",
+        "duration": "03:32",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Dua Lipa - Dua Lipa (Complete Edition) (2018)\\Dua Lipa - Dua Lipa (Complete Edition)"
+    },
+    {
+        "name": "20 Kiss and Make Up.mp3",
+        "track": "20",
+        "title": "Kiss and Make Up",
+        "artist": "Dua Lipa, BLACKPINK",
+        "genre": "Pop",
+        "duration": "02:59",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Dua Lipa - Dua Lipa (Complete Edition) (2018)\\Dua Lipa - Dua Lipa (Complete Edition)"
+    },
+    {
+        "name": "21 One Kiss.mp3",
+        "track": "21",
+        "title": "One Kiss",
+        "artist": "Calvin Harris, Dua Lipa",
+        "genre": "Pop",
+        "duration": "03:25",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Dua Lipa - Dua Lipa (Complete Edition) (2018)\\Dua Lipa - Dua Lipa (Complete Edition)"
+    },
+    {
+        "name": "22 Electricity.mp3",
+        "track": "22",
+        "title": "Electricity",
+        "artist": "Dua Lipa, Silk City",
+        "genre": "Pop",
+        "duration": "03:48",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Dua Lipa - Dua Lipa (Complete Edition) (2018)\\Dua Lipa - Dua Lipa (Complete Edition)"
+    },
+    {
+        "name": "23 Scared to Be Lonely.mp3",
+        "track": "23",
+        "title": "Scared to Be Lonely",
+        "artist": "Martin Garrix, Dua Lipa",
+        "genre": "Pop",
+        "duration": "03:31",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Dua Lipa - Dua Lipa (Complete Edition) (2018)\\Dua Lipa - Dua Lipa (Complete Edition)"
+    },
+    {
+        "name": "24 No Lie.mp3",
+        "track": "24",
+        "title": "No Lie",
+        "artist": "Sean Paul, Dua Lipa",
+        "genre": "Pop",
+        "duration": "03:31",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Dua Lipa - Dua Lipa (Complete Edition) (2018)\\Dua Lipa - Dua Lipa (Complete Edition)"
+    },
+    {
+        "name": "25 New Rules (Live).mp3",
+        "track": "25",
+        "title": "New Rules (Live)",
+        "artist": "Dua Lipa",
+        "genre": "Pop",
+        "duration": "04:25",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Dua Lipa - Dua Lipa (Complete Edition) (2018)\\Dua Lipa - Dua Lipa (Complete Edition)"
     },
     {
         "name": "01 - Everlong.mp3",
@@ -2110,6 +3050,106 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Khalid - American Teen (2017)"
     },
     {
+        "name": "01. Nobody Can Save Me.mp3",
+        "track": "1",
+        "title": "Nobody Can Save Me",
+        "artist": "Linkin Park",
+        "genre": "Rock",
+        "duration": "03:36",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Linkin Park - One More Light (2017)\\Linkin Park - One More Light (2017)"
+    },
+    {
+        "name": "02. Good Goodbye (feat. Pusha T & Stormzy).mp3",
+        "track": "2",
+        "title": "Good Goodbye (feat. Pusha T and Stormzy)",
+        "artist": "Linkin Park",
+        "genre": "Rock",
+        "duration": "03:21",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Linkin Park - One More Light (2017)\\Linkin Park - One More Light (2017)"
+    },
+    {
+        "name": "03. Talking to Myself.mp3",
+        "track": "3",
+        "title": "Talking to Myself",
+        "artist": "Linkin Park",
+        "genre": "Rock",
+        "duration": "03:41",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Linkin Park - One More Light (2017)\\Linkin Park - One More Light (2017)"
+    },
+    {
+        "name": "04. Battle Symphony.mp3",
+        "track": "4",
+        "title": "Battle Symphony",
+        "artist": "Linkin Park",
+        "genre": "Rock",
+        "duration": "03:26",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Linkin Park - One More Light (2017)\\Linkin Park - One More Light (2017)"
+    },
+    {
+        "name": "05. Invisible.mp3",
+        "track": "5",
+        "title": "Invisible",
+        "artist": "Linkin Park",
+        "genre": "Rock",
+        "duration": "03:24",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Linkin Park - One More Light (2017)\\Linkin Park - One More Light (2017)"
+    },
+    {
+        "name": "06. Heavy (feat. Kiiara).mp3",
+        "track": "6",
+        "title": "Heavy (feat. Kiiara)",
+        "artist": "Linkin Park",
+        "genre": "Rock",
+        "duration": "02:40",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Linkin Park - One More Light (2017)\\Linkin Park - One More Light (2017)"
+    },
+    {
+        "name": "07. Sorry for Now.mp3",
+        "track": "7",
+        "title": "Sorry for Now",
+        "artist": "Linkin Park",
+        "genre": "Rock",
+        "duration": "03:14",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Linkin Park - One More Light (2017)\\Linkin Park - One More Light (2017)"
+    },
+    {
+        "name": "08. Halfway Right.mp3",
+        "track": "8",
+        "title": "Halfway Right",
+        "artist": "Linkin Park",
+        "genre": "Rock",
+        "duration": "03:27",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Linkin Park - One More Light (2017)\\Linkin Park - One More Light (2017)"
+    },
+    {
+        "name": "09. One More Light.mp3",
+        "track": "9",
+        "title": "One More Light",
+        "artist": "Linkin Park",
+        "genre": "Rock",
+        "duration": "04:05",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Linkin Park - One More Light (2017)\\Linkin Park - One More Light (2017)"
+    },
+    {
+        "name": "10. Sharp Edges.mp3",
+        "track": "10",
+        "title": "Sharp Edges",
+        "artist": "Linkin Park",
+        "genre": "Rock",
+        "duration": "02:48",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Linkin Park - One More Light (2017)\\Linkin Park - One More Light (2017)"
+    },
+    {
         "name": "01. When I Fall In Love.mp3",
         "track": "1",
         "title": "When I Fall In Love",
@@ -2408,6 +3448,146 @@
         "duration": "02:49",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\Nas - Greatest Hits (2007) 320kbps"
+    },
+    {
+        "name": "01.You Know You're Right.mp3",
+        "track": "1",
+        "title": "You Know You're Right",
+        "artist": "Nirvana",
+        "genre": "Grunge",
+        "duration": "03:28",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Nirvana - Greatest Hits (2002)"
+    },
+    {
+        "name": "02.About A Girl.mp3",
+        "track": "2",
+        "title": "About A Girl",
+        "artist": "Nirvana",
+        "genre": "Grunge",
+        "duration": "02:39",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Nirvana - Greatest Hits (2002)"
+    },
+    {
+        "name": "03.Been A Son.mp3",
+        "track": "3",
+        "title": "Been A Son",
+        "artist": "Nirvana",
+        "genre": "Grunge",
+        "duration": "02:14",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Nirvana - Greatest Hits (2002)"
+    },
+    {
+        "name": "04.Sliver.mp3",
+        "track": "4",
+        "title": "Sliver",
+        "artist": "Nirvana",
+        "genre": "Grunge",
+        "duration": "02:04",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Nirvana - Greatest Hits (2002)"
+    },
+    {
+        "name": "05.Smells Like Teen Spirit.mp3",
+        "track": "5",
+        "title": "Smells Like Teen Spirit",
+        "artist": "Nirvana",
+        "genre": "Grunge",
+        "duration": "04:51",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Nirvana - Greatest Hits (2002)"
+    },
+    {
+        "name": "06.Come As You Are.mp3",
+        "track": "6",
+        "title": "Come As You Are",
+        "artist": "Nirvana",
+        "genre": "Grunge",
+        "duration": "03:29",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Nirvana - Greatest Hits (2002)"
+    },
+    {
+        "name": "07.Lithium.mp3",
+        "track": "7",
+        "title": "Lithium",
+        "artist": "Nirvana",
+        "genre": "Grunge",
+        "duration": "04:07",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Nirvana - Greatest Hits (2002)"
+    },
+    {
+        "name": "08.In Bloom.mp3",
+        "track": "8",
+        "title": "In Bloom",
+        "artist": "Nirvana",
+        "genre": "Grunge",
+        "duration": "04:05",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Nirvana - Greatest Hits (2002)"
+    },
+    {
+        "name": "09.Heart Shaped Box.mp3",
+        "track": "9",
+        "title": "Heart Shaped Box",
+        "artist": "Nirvana",
+        "genre": "Grunge",
+        "duration": "04:32",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Nirvana - Greatest Hits (2002)"
+    },
+    {
+        "name": "10.Pennyroyal Tea.mp3",
+        "track": "10",
+        "title": "Pennyroyal Tea",
+        "artist": "Nirvana",
+        "genre": "Grunge",
+        "duration": "03:28",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Nirvana - Greatest Hits (2002)"
+    },
+    {
+        "name": "11.Rape Me.mp3",
+        "track": "11",
+        "title": "Rape Me",
+        "artist": "Nirvana",
+        "genre": "Grunge",
+        "duration": "02:41",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Nirvana - Greatest Hits (2002)"
+    },
+    {
+        "name": "12.Dumb.mp3",
+        "track": "12",
+        "title": "Dumb",
+        "artist": "Nirvana",
+        "genre": "Grunge",
+        "duration": "02:25",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Nirvana - Greatest Hits (2002)"
+    },
+    {
+        "name": "13.All Apologies.mp3",
+        "track": "13",
+        "title": "All Apologies",
+        "artist": "Nirvana",
+        "genre": "Grunge",
+        "duration": "03:38",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Nirvana - Greatest Hits (2002)"
+    },
+    {
+        "name": "14.The Man Who Sold The World.mp3",
+        "track": "14",
+        "title": "The Man Who Sold The World",
+        "artist": "Nirvana",
+        "genre": "Grunge",
+        "duration": "03:37",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Nirvana - Greatest Hits (2002)"
     },
     {
         "name": "01. Paranoid.mp3",
@@ -3140,6 +4320,56 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Radiohead - Greatest Hits 2CD (2008) 320 vtwin88cube"
     },
     {
+        "name": "2018-05-25_-_The_Quiet_Morning_-_David_Fesliyan.mp3",
+        "track": "1",
+        "title": "The Quiet Morning",
+        "artist": "FesliyanStudios.com ASCAP IPI 792929876, 792929974",
+        "genre": "Soundtrack",
+        "duration": "03:19",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\RELAXING MUSIC"
+    },
+    {
+        "name": "2019-04-26_-_Tranquility_-_www.fesliyanstudios.com.mp3",
+        "track": "1",
+        "title": "www.fesliyanstudios.com",
+        "artist": "FesliyanStudios.com ASCAP IPI 792929876, 792929974",
+        "genre": "Soundtrack",
+        "duration": "04:10",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\RELAXING MUSIC"
+    },
+    {
+        "name": "2020-01-19_-_Feeling_Happy_-_FesliyanStudios.com_-_David_Renda.mp3",
+        "track": "7",
+        "title": "Feeling Happy",
+        "artist": "FesliyanStudios.com ASCAP IPI 792929876, 792929974",
+        "genre": "pop",
+        "duration": "03:13",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\RELAXING MUSIC"
+    },
+    {
+        "name": "2020-02-22_-_Relaxing_Green_Nature_-_David_Fesliyan.mp3",
+        "track": "1",
+        "title": "Relaxing Green Nature",
+        "artist": "FesliyanStudios.com ASCAP IPI 792929876, 792929974",
+        "genre": "Instrumental",
+        "duration": "03:33",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\RELAXING MUSIC"
+    },
+    {
+        "name": "2020-03-22_-_The_Soft_Lullaby_-_FesliyanStudios.com_-_David_Renda.mp3",
+        "track": "1",
+        "title": "The Soft Lullaby",
+        "artist": "FesliyanStudios.com ASCAP IPI 792929876, 792929974",
+        "genre": "Instrumental",
+        "duration": "04:47",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\RELAXING MUSIC"
+    },
+    {
         "name": "01 If I Can't Have You.mp3",
         "track": "1",
         "title": "If I Can't Have You",
@@ -3640,6 +4870,166 @@
         "song_dir": "C:\\Users\\Dave\\Music\\Snow Patrol \u2013 Greatest Hits [ChattChitto RG]\\Greatest Hits"
     },
     {
+        "name": "01 the 1.mp3",
+        "track": "1",
+        "title": "the 1",
+        "artist": "Taylor Swift",
+        "genre": "Alternative",
+        "duration": "03:20",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Taylor Swift - folklore (2020)"
+    },
+    {
+        "name": "02 cardigan.mp3",
+        "track": "2",
+        "title": "cardigan",
+        "artist": "Taylor Swift",
+        "genre": "Alternative",
+        "duration": "03:50",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Taylor Swift - folklore (2020)"
+    },
+    {
+        "name": "03 the last great american dynasty.mp3",
+        "track": "3",
+        "title": "the last great american dynasty",
+        "artist": "Taylor Swift",
+        "genre": "Alternative",
+        "duration": "03:41",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Taylor Swift - folklore (2020)"
+    },
+    {
+        "name": "04 exile.mp3",
+        "track": "4",
+        "title": "exile",
+        "artist": "Taylor Swift, Bon Iver",
+        "genre": "Alternative",
+        "duration": "04:36",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Taylor Swift - folklore (2020)"
+    },
+    {
+        "name": "05 my tears ricochet.mp3",
+        "track": "5",
+        "title": "my tears ricochet",
+        "artist": "Taylor Swift",
+        "genre": "Alternative",
+        "duration": "04:06",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Taylor Swift - folklore (2020)"
+    },
+    {
+        "name": "06 mirrorball.mp3",
+        "track": "6",
+        "title": "mirrorball",
+        "artist": "Taylor Swift",
+        "genre": "Alternative",
+        "duration": "03:19",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Taylor Swift - folklore (2020)"
+    },
+    {
+        "name": "07 seven.mp3",
+        "track": "7",
+        "title": "seven",
+        "artist": "Taylor Swift",
+        "genre": "Alternative",
+        "duration": "03:19",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Taylor Swift - folklore (2020)"
+    },
+    {
+        "name": "08 august.mp3",
+        "track": "8",
+        "title": "august",
+        "artist": "Taylor Swift",
+        "genre": "Alternative",
+        "duration": "04:12",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Taylor Swift - folklore (2020)"
+    },
+    {
+        "name": "09 this is me trying.mp3",
+        "track": "9",
+        "title": "this is me trying",
+        "artist": "Taylor Swift",
+        "genre": "Alternative",
+        "duration": "03:05",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Taylor Swift - folklore (2020)"
+    },
+    {
+        "name": "10 illicit affairs.mp3",
+        "track": "10",
+        "title": "illicit affairs",
+        "artist": "Taylor Swift",
+        "genre": "Alternative",
+        "duration": "03:01",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Taylor Swift - folklore (2020)"
+    },
+    {
+        "name": "11 invisible string.mp3",
+        "track": "11",
+        "title": "invisible string",
+        "artist": "Taylor Swift",
+        "genre": "Alternative",
+        "duration": "04:03",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Taylor Swift - folklore (2020)"
+    },
+    {
+        "name": "12 mad woman.mp3",
+        "track": "12",
+        "title": "mad woman",
+        "artist": "Taylor Swift",
+        "genre": "Alternative",
+        "duration": "03:47",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Taylor Swift - folklore (2020)"
+    },
+    {
+        "name": "13 epiphany.mp3",
+        "track": "13",
+        "title": "epiphany",
+        "artist": "Taylor Swift",
+        "genre": "Alternative",
+        "duration": "04:40",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Taylor Swift - folklore (2020)"
+    },
+    {
+        "name": "14 betty.mp3",
+        "track": "14",
+        "title": "betty",
+        "artist": "Taylor Swift",
+        "genre": "Alternative",
+        "duration": "04:45",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Taylor Swift - folklore (2020)"
+    },
+    {
+        "name": "15 peace.mp3",
+        "track": "15",
+        "title": "peace",
+        "artist": "Taylor Swift",
+        "genre": "Alternative",
+        "duration": "03:44",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Taylor Swift - folklore (2020)"
+    },
+    {
+        "name": "16 hoax.mp3",
+        "track": "16",
+        "title": "hoax",
+        "artist": "Taylor Swift",
+        "genre": "Alternative",
+        "duration": "03:30",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\Taylor Swift - folklore (2020)"
+    },
+    {
         "name": "01. I Forgot That You Existed.mp3",
         "track": "1",
         "title": "I Forgot That You Existed",
@@ -3968,6 +5358,406 @@
         "duration": "03:43",
         "status": "",
         "song_dir": "C:\\Users\\Dave\\Music\\Taylor Swift - Reputation (2017)"
+    },
+    {
+        "name": "01. Jawsh 685 & Jason Derulo - Savage Love (Laxed - Siren Beat).mp3",
+        "track": "1",
+        "title": "Savage Love (Laxed - Siren Beat)",
+        "artist": "Jawsh 685 & Jason Derulo",
+        "genre": "Pop",
+        "duration": "02:41",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "02. DaBaby - ROCKSTAR (feat. Roddy Ricch).mp3",
+        "track": "1",
+        "title": "ROCKSTAR (feat. Roddy Ricch)",
+        "artist": "DaBaby",
+        "genre": "Hip-Hop/Rap",
+        "duration": "02:52",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "03. Lady Gaga & Ariana Grande - Rain On Me.mp3",
+        "track": "1",
+        "title": "Rain On Me",
+        "artist": "Lady Gaga & Ariana Grande",
+        "genre": "Pop",
+        "duration": "02:52",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "04. Topic & A7S - Breaking Me.mp3",
+        "track": "1",
+        "title": "Breaking Me",
+        "artist": "Topic, A7S",
+        "genre": "Dance",
+        "duration": "02:37",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "05. S1mba - Rover (feat. DTG).mp3",
+        "track": "1",
+        "title": "Rover (feat. DTG)",
+        "artist": "S1mba;DTG",
+        "genre": "Rap/Hip Hop",
+        "duration": "02:38",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "06. Harry Styles - Watermelon Sugar.mp3",
+        "track": "1",
+        "title": "Watermelon Sugar",
+        "artist": "Harry Styles",
+        "genre": "Pop",
+        "duration": "02:45",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "07. AJ Tracey & Mabel - West Ten.mp3",
+        "track": "1",
+        "title": "West Ten",
+        "artist": "AJ Tracey & Mabel",
+        "genre": "Hip-Hop/Rap",
+        "duration": "03:24",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "08. AJ Tracey - Dinner Guest (feat. MoStack).mp3",
+        "track": "1",
+        "title": "Dinner Guest (feat. MoStack)",
+        "artist": "AJ Tracey",
+        "genre": "Hip-Hop/Rap",
+        "duration": "03:08",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "09. Pop Smoke - The Woo (feat. 50 Cent & Roddy Ricch).mp3",
+        "track": "1",
+        "title": "The Woo (feat. 50 Cent & Roddy Ricch)",
+        "artist": "Pop Smoke",
+        "genre": "Hip-Hop/Rap",
+        "duration": "03:12",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "10. Regard & Raye - Secrets.mp3",
+        "track": "1",
+        "title": "Secrets",
+        "artist": "Regard, Raye",
+        "genre": "Dance",
+        "duration": "02:47",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "11. 220 KID - Don\u2019t Need Love.mp3",
+        "track": "1",
+        "title": "Don\u2019t Need Love",
+        "artist": "220 KID;Gracey",
+        "genre": "Dance",
+        "duration": "03:06",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "12. Megan Thee Stallion - Savage.mp3",
+        "track": "1",
+        "title": "Savage",
+        "artist": "Megan Thee Stallion",
+        "genre": "Rap/Hip Hop",
+        "duration": "02:26",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "13. Tion Wayne - I Dunno (feat. Dutchavelli & Stormzy).mp3",
+        "track": "1",
+        "title": "I Dunno (feat. Dutchavelli & Stormzy)",
+        "artist": "Tion Wayne, Dutchavelli, Stormzy",
+        "genre": "Rap/Hip Hop",
+        "duration": "02:48",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "14. Pop Smoke - For The Night.mp3",
+        "track": "1",
+        "title": "For The Night",
+        "artist": "Pop Smoke, Lil Baby, DaBaby",
+        "genre": "Rap/Hip Hop",
+        "duration": "03:01",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "15. Joel Corry - Head & Heart (feat. MNEK).mp3",
+        "track": "1",
+        "title": "Head & Heart (feat. MNEK)",
+        "artist": "Joel Corry, MNEK",
+        "genre": "Dance",
+        "duration": "02:36",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "16. The Weeknd - Blinding Lights.mp3",
+        "track": "1",
+        "title": "Blinding Lights",
+        "artist": "The Weeknd",
+        "genre": "R&B/Soul",
+        "duration": "03:12",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "17. StaySolidRocky - Party Girl.mp3",
+        "track": "1",
+        "title": "Party Girl",
+        "artist": "StaySolidRocky",
+        "genre": "Hip-Hop/Rap",
+        "duration": "02:18",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "18. Sam Fischer - This City.mp3",
+        "track": "1",
+        "title": "This City",
+        "artist": "Sam Fischer",
+        "genre": "Pop",
+        "duration": "03:05",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "19. Nathan Dawe - Flowers (feat. Jaykae).mp3",
+        "track": "1",
+        "title": "Flowers (feat. Jaykae)",
+        "artist": "Nathan Dawe;Jaykae",
+        "genre": "Dance",
+        "duration": "03:07",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "20. Dua Lipa - Break My Heart.mp3",
+        "track": "1",
+        "title": "Break My Heart",
+        "artist": "Dua Lipa",
+        "genre": "Pop",
+        "duration": "03:32",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "21. Ariana Grande & Justin Bieber - Stuck with U.mp3",
+        "track": "1",
+        "title": "Stuck with U",
+        "artist": "Ariana Grande & Justin Bieber",
+        "genre": "Pop",
+        "duration": "03:39",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "22. Ava Max - Kings & Queens.mp3",
+        "track": "1",
+        "title": "Kings & Queens",
+        "artist": "Ava Max",
+        "genre": "Pop",
+        "duration": "02:32",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "23. Pop Smoke - Mood Swings.mp3",
+        "track": "1",
+        "title": "Mood Swings",
+        "artist": "Pop Smoke, Lil Tjay",
+        "genre": "Rap/Hip Hop",
+        "duration": "03:23",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "24. Digga D - Woi.mp3",
+        "track": "1",
+        "title": "Woi",
+        "artist": "Digga D",
+        "genre": "Rap/Hip Hop",
+        "duration": "02:52",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "25. Young T & Bugsey - Don't Rush.mp3",
+        "track": "1",
+        "title": "Don't Rush",
+        "artist": "Young T & Bugsey, Headie One",
+        "genre": "Rap/Hip Hop",
+        "duration": "03:18",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "26. Jubel & NEIMY - Dancing in the Moonlight.mp3",
+        "track": "1",
+        "title": "Dancing in the Moonlight",
+        "artist": "Jubel, NEIMY",
+        "genre": "Dance",
+        "duration": "02:34",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "27. Chris Brown & Young Thug - Go Crazy.mp3",
+        "track": "1",
+        "title": "Go Crazy",
+        "artist": "Chris Brown, Young Thug",
+        "genre": "R&B",
+        "duration": "02:47",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "28. GRM Daily - Burning (feat. M Huncho & Dutchavelli).mp3",
+        "track": "1",
+        "title": "Burning (feat. M Huncho & Dutchavelli)",
+        "artist": "GRM Daily, M Huncho, Dutchavelli",
+        "genre": "Rap/Hip Hop",
+        "duration": "02:40",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "29. Jack Harlow - WHATS POPPIN.mp3",
+        "track": "1",
+        "title": "WHATS POPPIN",
+        "artist": "Jack Harlow",
+        "genre": "Rap/Hip Hop",
+        "duration": "02:10",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "30. Drake - Chicago Freestyle.mp3",
+        "track": "1",
+        "title": "Chicago Freestyle",
+        "artist": "Drake",
+        "genre": "Hip-Hop",
+        "duration": "03:31",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "31. Surf Mesa - ily (i love you baby).mp3",
+        "track": "1",
+        "title": "ily (i love you baby)",
+        "artist": "Surf Mesa, Emilee",
+        "genre": "Dance",
+        "duration": "02:47",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "32. SAINt JHN - Roses (Imanbek Remix).mp3",
+        "track": "1",
+        "title": "Roses (Imanbek Remix)",
+        "artist": "SAINt JHN",
+        "genre": "Dance",
+        "duration": "02:47",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "33. Tones and I - Dance Monkey.mp3",
+        "track": "1",
+        "title": "Dance Monkey",
+        "artist": "Tones and I",
+        "genre": "Alternative",
+        "duration": "03:20",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "34. Ty Dolla $ign - Ego Death (feat. Kanye West, FKA twigs & Skrillex).mp3",
+        "track": "1",
+        "title": "Ego Death (feat. Kanye West, FKA twigs & Skrillex)",
+        "artist": "Ty Dolla $ign",
+        "genre": "Hip-Hop/Rap",
+        "duration": "03:41",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "35. 6ix9ine - GOOBA.mp3",
+        "track": "1",
+        "title": "GOOBA",
+        "artist": "6ix9ine",
+        "genre": "Hip-Hop/Rap",
+        "duration": "02:02",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "36. Deno, OFB, BandoKay, Double Lz - Circles.mp3",
+        "track": "1",
+        "title": "Circles",
+        "artist": "Deno, OFB, BandoKay, Double Lz",
+        "genre": "Rap/Hip Hop",
+        "duration": "02:49",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "37. Powfu - Death Bed (feat. beabadoobee).mp3",
+        "track": "1",
+        "title": "death bed",
+        "artist": "Powfu;beabadoobee",
+        "genre": "Rap/Hip Hop",
+        "duration": "02:43",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "38. Little Mix - Break Up Song.mp3",
+        "track": "1",
+        "title": "Break Up Song",
+        "artist": "Little Mix",
+        "genre": "Pop",
+        "duration": "03:10",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "39. Niko B - Who's That What's That.mp3",
+        "track": "1",
+        "title": "Who's That What's That",
+        "artist": "Niko B",
+        "genre": "Rap/Hip Hop",
+        "duration": "03:50",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
+    },
+    {
+        "name": "40. Becky Hill & Sigala - Heaven On My Mind.mp3",
+        "track": "1",
+        "title": "Heaven On My Mind",
+        "artist": "Becky Hill & Sigala",
+        "genre": "Pop",
+        "duration": "03:02",
+        "status": "",
+        "song_dir": "C:\\Users\\Dave\\Music\\The Official UK Top 40 Singles Chart (10.07.2020)\\The Official UK Top 40 Singles Chart (10.07.2020)"
     },
     {
         "name": "01. WILD.mp3",
