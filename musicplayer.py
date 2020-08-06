@@ -449,8 +449,8 @@ class MusicPlayer:
 
         return setting[0]
 
-    def terminate_player(self):
-        setting = {"status": "close", "volume": 0}
+    def player_status(self, stat):
+        setting = {"status": stat}
         self.update_player_setting(setting)
 
     def start_player(self):
@@ -482,8 +482,6 @@ class MusicPlayer:
 
             # load media and parse meta information
             self.playlist = self.load_media()
-            # set the location of command prompt (music player view)
-            os.system("CMDOW @ /ren \"Music Player\" /mov 445 -35 /siz 770 600")
 
             if len(self.playlist) <= 0:
                 print("\n**No audio files found.")
@@ -491,8 +489,9 @@ class MusicPlayer:
                 return
 
         os.system("cls")
-        print(
-            f"\n\t{'Shuffling' if self.toggle_shuffle else 'Loading'} playlist...")
+        # set the location of command prompt (music player view)
+        os.system("CMDOW @ /ren \"Music Player\" /mov 445 -35 /siz 770 600")
+        print(f"\n\t{'Shuffling' if self.toggle_shuffle else 'Loading'} playlist...")
         time.sleep(1)
 
         # Internal method: actual music player for playlist,
@@ -582,13 +581,30 @@ class MusicPlayer:
                     setting = self.get_player_setting()
 
                     if setting:
-                        if setting["status"] == "close":
+                        status = setting["status"].strip().lower()
+                        if status == "close":
+                            self.player_status("close")
                             exit()
+
+                        elif status in ["play", "pause"]:
+                            if self.player.is_playing() and "pause" in status:
+                                self.player.pause()
+                                self.player_status("pause")
+                            elif "play" in status:
+                                self.player.play()
+                                self.player_status("Playing")
+                            time.sleep(1)
+
+                        elif status == "skip":
+                            self.player_status("Playing")
+                            return status
+
                         if setting["volume"] != self.volume:
                             self.volume = int(setting["volume"])
                             self.player.audio_set_volume(self.volume)
 
                     self.setting_counter = 0
+                return ""
 
             status = "Done"
             try:
@@ -601,7 +617,9 @@ class MusicPlayer:
                     status = "Done"
 
                     # get or set updates on player settings
-                    update_setting()
+                    setting = update_setting()
+                    if setting:
+                        status = setting
 
                     # stop the song
                     if keyboard.is_pressed("f4"):
@@ -611,29 +629,36 @@ class MusicPlayer:
                     elif keyboard.is_pressed("f5"):
                         status = "Shuffle"
                         break
+                    # toggle to "Compact Mode" player
+                    elif keyboard.is_pressed("shift") and keyboard.is_pressed("enter"):
+                        status = "Compact Mode"
+                        break
                     # play or pause the song
                     if keyboard.is_pressed("f9"):
                         if self.player.is_playing():
                             self.player.pause()
+                            self.player_status("pause")
                         else:
                             self.player.play()
+                            self.player_status("Playing")
                         # to avoid trigger multiple times at once
                         time.sleep(1)
                     # skip the song
-                    elif keyboard.is_pressed("f10"):
+                    elif keyboard.is_pressed("f10") or status == "skip":
                         status = "Skipped"
+                        self.player_status("Playing")
                         # to avoid skipping multiple times at once
                         time.sleep(1)
                         break
                     # volume down
                     elif keyboard.is_pressed("f12"):
-                        if 0 < self.volume < 100:
-                            self.volume -= 2
+                        if 0 < self.volume <= 100:
+                            self.volume -= 5
                             self.player.audio_set_volume(self.volume)
                     # volume up
                     elif keyboard.is_pressed("ins"):
-                        if 0 < self.volume < 100:
-                            self.volume += 2
+                        if 0 < self.volume <= 100:
+                            self.volume += 5
                             self.player.audio_set_volume(self.volume)
 
                     # get song state every second
@@ -691,6 +716,9 @@ class MusicPlayer:
                     elif song_status == "Shuffle":
                         # call itself with parameters to shuffle/unshuffle music list
                         return self.music_player(playlist_folder=self.folder_dir, play_shuffle=(not self.toggle_shuffle))
+                    # toggle "Compact Mode" player
+                    elif song_status == "Compact Mode":
+                        return self.compact_music_player(playlist_folder=self.folder_dir, is_playlist=True, play_shuffle=self.toggle_shuffle)
 
                     # something went wrong while playing music
                     if not is_done_playing:
@@ -698,8 +726,7 @@ class MusicPlayer:
                         status = "Err"
 
                     # update status of the song in self.playlist (marked as "Done", "Skipped" or "Can't play")
-                    self.update_playlist(
-                        song["name"], key="status", value=song_status)
+                    self.update_playlist(song["name"], key="status", value=song_status)
 
         # ordered playlist
         else:
@@ -720,6 +747,9 @@ class MusicPlayer:
                 elif song_status == "Shuffle":
                     # call itself with parameters to shuffle/unshuffle music list
                     return self.music_player(playlist_folder=self.folder_dir, play_shuffle=(not self.toggle_shuffle))
+                # toggle "Compact Mode" player
+                elif song_status == "Compact Mode":
+                    return self.compact_music_player(playlist_folder=self.folder_dir, is_playlist=True, play_shuffle=self.toggle_shuffle)
 
                 # something went wrong while playing music
                 if not is_done_playing:
@@ -727,8 +757,7 @@ class MusicPlayer:
                     song_status = "Err"
 
                 # update status of the song in self.playlist (marked as "Done", "Skipped" or "Can't play")
-                self.update_playlist(
-                    song['name'], key="status", value=song_status)
+                self.update_playlist(song['name'], key="status", value=song_status)
 
         # reset the playlist
         self.playlist = []
@@ -747,9 +776,7 @@ class MusicPlayer:
 
             # load media and parse meta information
             self.playlist = self.load_media(is_playlist=is_playlist)
-            # set the location of command prompt (music player view)
-            os.system("CMDOW @ /ren \"Music Player\" /mov 601 -35 /siz 790 103")
-
+            
             if len(self.playlist) <= 0:
                 print("\n**No audio file found.")
                 time.sleep(3)
@@ -817,17 +844,34 @@ class MusicPlayer:
                         break
 
             def update_setting():
-                if self.setting_counter >= 10:
+                if self.setting_counter >= 1:
                     setting = self.get_player_setting()
 
                     if setting:
-                        if setting["status"] == "close":
+                        status = setting["status"].strip().lower()
+                        if status == "close":
+                            self.player_status("close")
                             exit()
+
+                        elif status in ["play", "pause"]:
+                            if self.player.is_playing() and "pause" in status:
+                                self.player.pause()
+                                self.player_status("pause")
+                            elif "play" in status:
+                                self.player.play()
+                                self.player_status("Playing")
+                            time.sleep(1)
+
+                        elif status == "skip":
+                            self.player_status("Playing")
+                            return status
+
                         if setting["volume"] != self.volume:
                             self.volume = int(setting["volume"])
                             self.player.audio_set_volume(self.volume)
 
                     self.setting_counter = 0
+                return ""
 
             status = "Done"
             try:
@@ -841,7 +885,9 @@ class MusicPlayer:
                     status = "Done"
 
                     # get or set updates on player settings
-                    update_setting()
+                    setting = update_setting()
+                    if setting:
+                        status = setting
 
                     # stop the song
                     if keyboard.is_pressed("f4"):
@@ -851,27 +897,36 @@ class MusicPlayer:
                     elif keyboard.is_pressed("f5"):
                         status = "Shuffle"
                         break
+                    # toggle to "Compact Mode" player
+                    elif keyboard.is_pressed("shift") and keyboard.is_pressed("enter"):
+                        status = "Normal Mode"
+                        break
                     # play or pause the song
                     if keyboard.is_pressed("f9"):
                         if self.player.is_playing():
                             self.player.pause()
+                            self.player_status("pause")
                         else:
                             self.player.play()
+                            self.player_status("Playing")
+                        # to avoid trigger multiple times at once
+                        time.sleep(1)
                     # skip the song
-                    elif keyboard.is_pressed("f10"):
+                    elif keyboard.is_pressed("f10") or status == "skip":
                         status = "Skipped"
+                        self.player_status("Playing")
                         # to avoid skipping multiple times at once
                         time.sleep(1)
                         break
                     # volume down
                     elif keyboard.is_pressed("f12"):
-                        if 0 < self.volume < 100:
-                            self.volume -= 2
+                        if 0 < self.volume <= 100:
+                            self.volume -= 5
                             self.player.audio_set_volume(self.volume)
                     # volume up
                     elif keyboard.is_pressed("ins"):
-                        if 0 < self.volume < 100:
-                            self.volume += 2
+                        if 0 < self.volume <= 100:
+                            self.volume += 5
                             self.player.audio_set_volume(self.volume)
 
                     # get song state every second
@@ -909,6 +964,9 @@ class MusicPlayer:
         # this is used to flag other instances of the music player
         self.start_player()
 
+        # set the location of command prompt (music player view)
+        os.system("CMDOW @ /ren \"Music Player\" /mov 601 -35 /siz 790 103")
+
         # playlist music player
         if is_playlist or self.random_music:
             os.system("cls")
@@ -939,6 +997,9 @@ class MusicPlayer:
                         # toggle shuffle mode
                         elif song_status == "Shuffle":
                             return self.compact_music_player(playlist_folder=self.folder_dir, is_playlist=is_playlist, play_shuffle=(not self.toggle_shuffle))
+                        # toggle to "Normal Mode" player
+                        elif song_status == "Normal Mode":
+                            return self.music_player(play_shuffle=self.toggle_shuffle, playlist_folder=self.folder_dir, play_all_music=False)
 
                         # something went wrong while playing music
                         if not is_done_playing:
@@ -968,6 +1029,9 @@ class MusicPlayer:
                     # toggle shuffle mode
                     elif song_status == "Shuffle":
                         return self.compact_music_player(playlist_folder=self.folder_dir, is_playlist=is_playlist, play_shuffle=(not self.toggle_shuffle))
+                    # toggle to "Normal Mode" player
+                    elif song_status == "Normal Mode":
+                        return self.music_player(play_shuffle=self.toggle_shuffle, playlist_folder=self.folder_dir, play_all_music=False)
 
                     # something went wrong while playing music
                     if not is_done_playing:
