@@ -2,7 +2,7 @@ import time
 # import wallpaper
 from image_crawler import ImageCrawler
 from send_email import EmailMessage, EmailService
-from send_toast import ToastMessage
+from ToastMessage import ToastMessage
 
 
 def main():
@@ -30,7 +30,7 @@ def main():
             toast = ToastMessage()
             title = input("Title of notification: ")
             msg = input("Message of notification: ")
-            toast.send_toast(title, msg)
+            toast.send_toast(title, msg, 600)
             print("\n")
             continue
 

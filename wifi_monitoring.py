@@ -1,21 +1,20 @@
-
 import json
 import os
 import subprocess
 import time
-from colorama import init
+from colorama import init, Fore
 from scapy.all import *
-from send_toast import ToastMessage
+# from send_toast import ToastMessage
 from threading import Thread
 
 
-NETWORK = "192.168.100.1"
-INTERVAL = 30
+NETWORK = "192.168.1.1"
+INTERVAL = 10
 
-UNKNOWN = "\033[1;37;41m"
-CONNECTED = "\033[1;32;49m"
-DISCONNECTED = "\033[1;33;49m"
-RESET = "\033[1;39;49m"
+UNKNOWN = Fore.RED  # "\033[1;37;41m"
+CONNECTED = Fore.GREEN  # "\033[1;32;49m"
+DISCONNECTED = Fore.RESET  # "\033[1;33;49m"
+RESET = Fore.RESET  # "\033[1;39;49m"
 
 
 class NetworkMonitor:
@@ -43,7 +42,7 @@ class NetworkMonitor:
             macs.add(json.dumps(net_id))
 
         for host in answered_list:
-            if host[1].psrc != "192.168.100.1":
+            if host[1].psrc != NETWORK:
                 net_id = {
                     "ip address": host[1].psrc,
                     "mac address": host[1].src
@@ -80,9 +79,12 @@ class NetworkMonitor:
                         # persist notification for "Unknown Device"
                         if device["alias"].lower() == "unknown device" and action.lower() == "online":
                             title = f"* * * Unknown Wi-Fi User * * *"
-                            message = f"Unknown Device is now {action}.\n\nMAC: {host_mac}\nIP: {host_ip}"
+                            message = f"Unknown Device is now {action}."
                             duration = 300  # 5mins
-                            self.send_notification(title, message, duration)
+                            # self.send_notification(title, message, duration)
+                            # os.system(f"say {message}")
+                            # create a daemon thread that prevent unknown devices to have internet connection
+                            self.stop_internet_connection(host_ip, host_mac)
                             title = ""
                             message = ""
             else:
@@ -94,29 +96,31 @@ class NetworkMonitor:
                 }
                 self.devices.append(unknown_device)
                 title = f"* * * Unknown Wi-Fi User * * *"
-                message = f"Unknown Device is now {action}.\n\nMAC: {host_mac}\nIP: {host_ip}"
+                message = f"New Unknown Device detected."
                 duration = 300  # 5mins
 
+                # os.system(f"say {message}")
                 # create a daemon thread that prevent unknown devices to have internet connection
                 self.stop_internet_connection(host_ip, host_mac)
 
-            if notify and title and message:
-                self.send_notification(title, message, duration)
+            # if notify and title and message:
+            # self.send_notification(title, message, duration)
 
         self.show()
 
     def send_notification(self, title, message, duration=10):
         notification = ToastMessage()
 
-        if title and message:
-            notif_thread = Thread(target=notification.send_toast, args=(title, message, duration,))
-            notif_thread.setDaemon(True)
-            notif_thread.start()
+        # if title and message:
+        #     notif_thread = Thread(target=notification.send_toast, args=(title, message, duration,))
+        #     notif_thread.setDaemon(True)
+        #     notif_thread.start()
 
     def stop_internet_connection(self, target_ip, target_mac):
 
         def _prevent_connection():
-            print(f"Preventing {target_ip} from accessing the internet...")
+            print(
+                f"{Fore.LIGHTRED_EX} Preventing {target_ip} from accessing the internet...{RESET}\n")
             while True:
                 # (by assigning host's ip address with invalid mac address)
                 self.poison(target_ip, target_mac)
@@ -127,39 +131,44 @@ class NetworkMonitor:
         kill_unknown_device_thread.start()
 
     def show(self):
-        os.system("cls")
+        os.system("clear")
         print("\n")
-        for device in sorted(self.devices, key=lambda device: device["alias"], reverse=True):
+        for device in sorted(self.devices, key=lambda device: device["status"], reverse=True):
             alias = device["alias"]
             mac = device["mac address"]
             ip = f'({device["ip address"] if device["ip address"] else "Undefined"})'
             status = device["status"]
 
             status_color = CONNECTED if status.lower() == "online" else DISCONNECTED
-            if device["alias"].lower() == "unknown device":
-                print(f"{UNKNOWN} {alias.ljust(20)}  {mac.ljust(18)}" + f"{status_color} {status}")
+            if status.lower() == 'online' and alias.lower() == "unknown device":
+                print(f"{UNKNOWN} {alias.ljust(20)} {mac.ljust(18)}" +
+                      f"{status_color} {status}")
                 print(f"{UNKNOWN} {ip.rjust(38)}  {RESET}")
+                # create a daemon thread that prevent unknown devices to have internet connection
+                self.stop_internet_connection(device["ip address"], mac)
+                print("-" * 50)
             else:
-                print(f"{status_color} {alias.ljust(20)} {RESET} {mac.ljust(18)} " + f"{status_color}{status}")
-                print(f"{status_color} {ip.rjust(38)}   {RESET}")
-            print("-" * 50)
+                if status.lower() == "online":
+                    print(
+                        f"{status_color} {alias.ljust(20)} {RESET} {mac.ljust(18)} " + f"{status_color}{status}")
+                    print(f"{status_color} {ip.rjust(38)}   {RESET}")
+                    print("-" * 50)
 
     def poison(self, victim_ip, victim_mac):
         # Send the victim an ARP packet pairing the gateway ip with the wrong
-        # mac address
-        packet = ARP(op=2, psrc=NETWORK, hwsrc='12:34:56:78:9A:BC', pdst=victim_ip, hwdst=victim_mac)
-        send(packet, verbose=0)
+        packet = ARP(op=2, psrc=victim_ip, hwsrc='12:34:56:78:9A:BG',
+                     pdst=victim_ip, hwdst=victim_mac)
+        sendp(packet, verbose=0)
 
     def restore(self, victim_ip, victim_mac, gateway_ip, gateway_mac):
         # Send the victim an ARP packet pairing the gateway ip with the correct
         # mac address
-        packet = ARP(op=2, psrc=gateway_ip, hwsrc=gateway_mac, pdst=victim_ip, hwdst=victim_mac)
+        packet = ARP(op=2, psrc=gateway_ip, hwsrc=gateway_mac,
+                     pdst=victim_ip, hwdst=victim_mac)
         send(packet, verbose=0)
 
     def main(self):
         try:
-            # os.system("CMDOW @ /ren \"Wi-Fi Users\" /MOV 960 -35 /siz 440 850 /NOT")
-            os.system("CMDOW @ /ren \"Wi-Fi Users\" /MOV 0 -35 /siz 440 850 /NOT")
             # autoreset color coding of texts to normal
             init(autoreset=True)
 
@@ -168,7 +177,6 @@ class NetworkMonitor:
             time.sleep(INTERVAL)
 
             while True:
-                os.system("CMDOW @ /ren \"Wi-Fi Users\" /MOV 0 -35 /siz 440 850 /NOT")
                 macs = self.scan(f"{NETWORK}/24")
                 new = macs - old_macs
                 self.connection_change(new, "Online", notify=True)

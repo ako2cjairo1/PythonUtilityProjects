@@ -10,7 +10,7 @@ import time
 import concurrent.futures as tasks
 
 FOLDER_NAME = "Downloaded Images"
-WALLPAPER_DIR = f"C:/Users/Dave/Pictures/{FOLDER_NAME}"
+WALLPAPER_DIR = f"/Users/jairo/Pictures/{FOLDER_NAME}"
 
 
 class ImageCrawler:
@@ -149,7 +149,7 @@ class ImageCrawler:
             adobe_site1 = [(f"Adobe Stock-{anchor.img['alt']}", anchor.img["src"]) for anchor in adobe_soup.find_all("a", {
                 "class": "js-search-result-thumbnail non-js-link"}) if anchor.img["src"].split(".")[-1] != "gif"]
             adobe_site2 = [(f"Adobe Stock-{img['alt']}", img["data-lazy"])
-                        for img in adobe_soup.find_all("img") if img["src"].split(".")[-1] == "gif"]
+                           for img in adobe_soup.find_all("img") if img["src"].split(".")[-1] == "gif"]
 
             # # put the list to main list of images
             img_links.extend(adobe_site1)
@@ -183,7 +183,7 @@ class ImageCrawler:
             # select img tags that has src starts with "https://image.shutterstock.com/image-photo"
             # from img tags found, create a list of tuples with image name and image url
             stocksnap_site1 = [(f"StockSnap.io-{img['src'].split('/')[-1].split('.')[-2]}", img["src"])
-                            for img in stocksnap_soup.select('img[src^="https://image.shutterstock.com/image-photo"]')]
+                               for img in stocksnap_soup.select('img[src^="https://image.shutterstock.com/image-photo"]')]
             stocksnap_site2 = [(f"StockSnap.io-{img['alt']}", img["src"]) for img in stocksnap_soup.find_all(
                 'img') if "https://cdn.stocksnap.io/img-thumbs" in img["src"]]
 
@@ -192,7 +192,7 @@ class ImageCrawler:
             img_links.extend(stocksnap_site2)
 
             params = (("query", f"{search_keyword}^"),
-                    ("xp", "^"), ("per_page", "1000"))
+                      ("xp", "^"), ("per_page", "1000"))
             # parse the response using BeautifulSoup
             unsplash_soup = _parse_html(
                 "https://unsplash.com/napi/search", params)

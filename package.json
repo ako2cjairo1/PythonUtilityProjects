@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "pip": "^0.0.1"
+  },
+  "name": "PythonUtilityProjects",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ako2cjairo1/PythonUtilityProjects.git",
+  "license": "MIT"
+}

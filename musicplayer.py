@@ -586,11 +586,11 @@ class MusicPlayer:
                             self.player_status("close")
                             exit()
 
-                        elif status in ["play", "pause"]:
+                        elif status in ["playing", "pause"]:
                             if self.player.is_playing() and "pause" in status:
                                 self.player.pause()
                                 self.player_status("pause")
-                            elif "play" in status:
+                            elif "playing" in status:
                                 self.player.play()
                                 self.player_status("Playing")
                             time.sleep(1)
@@ -776,7 +776,7 @@ class MusicPlayer:
 
             # load media and parse meta information
             self.playlist = self.load_media(is_playlist=is_playlist)
-            
+
             if len(self.playlist) <= 0:
                 print("\n**No audio file found.")
                 time.sleep(3)
@@ -853,11 +853,11 @@ class MusicPlayer:
                             self.player_status("close")
                             exit()
 
-                        elif status in ["play", "pause"]:
+                        elif status in ["playing", "pause"]:
                             if self.player.is_playing() and "pause" in status:
                                 self.player.pause()
                                 self.player_status("pause")
-                            elif "play" in status:
+                            elif "playing" in status:
                                 self.player.play()
                                 self.player_status("Playing")
                             time.sleep(1)
@@ -965,7 +965,7 @@ class MusicPlayer:
         self.start_player()
 
         # set the location of command prompt (music player view)
-        os.system("CMDOW @ /ren \"Music Player\" /mov 601 -35 /siz 790 103")
+        os.system("CMDOW @ /ren \"Music Player\" /mov 601 -35 /siz 860 103")
 
         # playlist music player
         if is_playlist or self.random_music:
